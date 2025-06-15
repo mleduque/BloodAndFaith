@@ -35,7 +35,7 @@ ALWAYS
 // Convert tra files in UTF8 if EE and let them in ANSI if oBG
 
 	ACTION_IF GAME_IS ~bgee eet~ BEGIN
-  ACTION_DEFINE_ARRAY BloodAndFaith_noconvert BEGIN BloodAndFaith END
+//  ACTION_DEFINE_ARRAY BloodAndFaith_noconvert BEGIN BloodAndFaith END
 
 		ACTION_DEFINE_ARRAY BloodAndFaith_reload BEGIN BloodAndFaith JournalEntries END
 
@@ -46,7 +46,7 @@ ALWAYS
 				tra_path = EVAL ~weidu_external/BloodAndFaith/Languages/autotra~
 				out_path = EVAL ~weidu_external/BloodAndFaith/Languages/autotra/UTF8~
 				iconv_path = ~BloodAndFaith/Languages/autotra/iconv~
-				noconvert_array = BloodAndFaith_noconvert
+				// noconvert_array = BloodAndFaith_noconvert
 				reload_array = BloodAndFaith_reload
 			END
 
@@ -70,6 +70,12 @@ LANGUAGE ~Simplified Chinese(by Lzw104522773)~
          ~schinese~   
          ~BloodAndFaith/Languages/schinese/BloodAndFaith.tra~ //you'd put the mod title in here.
          ~BloodAndFaith/Languages/schinese/JournalEntries.tra~
+
+LANGUAGE ~Russian (by CblblP & Arcanecoast.ru)~
+         ~russian~
+         ~BloodAndFaith/Languages/russian/BloodAndFaith.tra~ //you'd put the mod title in here.
+         ~BloodAndFaith/Languages/russian/JournalEntries.tra~
+
 
 BEGIN @4 /* Blood and Faith Installation */
 
