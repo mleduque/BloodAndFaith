@@ -332,10 +332,10 @@ COPY ~BloodAndFaith/items/gBFed.itm~ ~override/gBFed.itm~
     SAY DESC @29 /* This documents are encoded in a way that you've never seen before. */
 
 COPY ~BloodAndFaith/items/g_bfiMs.itm~ ~override/g_bfiMs.itm~
-    SAY NAME1 ~Mordiyin's Sword~
-    SAY NAME2 ~Mordiyin's Sword~
-SAY UNIDENTIFIED_DESC ~Something seems off about this sword.~
-    SAY DESC ~Taken from Mordiyin, a Zhent agent who specialized in hunting down defectors, this is a thoroughly evil weapon. Over the years, it has tasted the blood of many, and it thirsts for battle, for it is unnervingly proficient when wielded against humanoid foes. It glows with a chill light, and anyone not of evil intent finds that its touch burns too much to wield it.
+    SAY NAME1 @31 /* ~Mordiyin's Sword~ */
+    SAY NAME2 @31 /* ~Mordiyin's Sword~ */
+SAY UNIDENTIFIED_DESC @32 /* ~Something seems off about this sword.~ */
+    SAY DESC @33 /* ~Taken from Mordiyin, a Zhent agent who specialized in hunting down defectors, this is a thoroughly evil weapon. Over the years, it has tasted the blood of many, and it thirsts for battle, for it is unnervingly proficient when wielded against humanoid foes. It glows with a chill light, and anyone not of evil intent finds that its touch burns too much to wield it.
 
 STATISTICS:
 
@@ -349,12 +349,12 @@ Requires:
  6 Strength
  Cannot be used by Good-aligned character
 
-Weight: 4 ~
+Weight: 4 ~ */
 
 COPY ~BloodAndFaith/items/g_bfcl.itm~ ~override/g_bfcl.itm~
-    SAY NAME1 ~Beast Claw of Malar~
-    SAY NAME2 ~Beast Claw of Malar~
-    SAY DESC ~ Said to be a claw taken from one of Malar's favored beasts, this ring reeks of blood and pulsates slightly to the touch. The wearer is imbued with the Beastlord's stealth and ferocity, but at the cost of <PRO_HISHER> judgment and social graces.
+    SAY NAME1 @34 /* ~Beast Claw of Malar~ */
+    SAY NAME2 @34 /* ~Beast Claw of Malar~ */
+    SAY DESC @35 /* ~ Said to be a claw taken from one of Malar's favored beasts, this ring reeks of blood and pulsates slightly to the touch. The wearer is imbued with the Beastlord's stealth and ferocity, but at the cost of <PRO_HISHER> judgment and social graces.
 
 
 Equipped abilities:
@@ -364,13 +364,13 @@ Equipped abilities:
 - +2 Speed Modifier
 – -2 Wisdom
 - -3 Charisma
-– May only be removed with a Remove Curse spell~
+– May only be removed with a Remove Curse spell~*/
 
 
 COPY ~BloodAndFaith/items/g_bfist.itm~ ~override/g_bfist.itm~
-    SAY NAME1 ~Spinal Staff~
-    SAY NAME2 ~Spinal Staff~
-    SAY DESC ~The remains of some necromancer's victim, a trace of the agony felt by the spine's original owner can still be felt. It renders the bearer repellent in the eyes of others, but the magical power it grants is difficult to argue with. Sometimes it shifts in the hand as though still alive.
+    SAY NAME1 @36 /* ~Spinal Staff~ */
+    SAY NAME2 @36 /* ~Spinal Staff~ */
+    SAY DESC @37 /* ~The remains of some necromancer's victim, a trace of the agony felt by the spine's original owner can still be felt. It renders the bearer repellent in the eyes of others, but the magical power it grants is difficult to argue with. Sometimes it shifts in the hand as though still alive.
 
 
 Equipped abilities:
@@ -378,28 +378,28 @@ Equipped abilities:
 – Double wizard spells
 - -3 Charisma
 - -2 Constitution
-- Can't be used by Good ~
+- Can't be used by Good ~*/
 
 COPY ~BloodAndFaith/items/g_bfiam.itm~ ~override/g_bfiam.itm~
-    SAY NAME1 ~Eloran's Amulet~
-    SAY NAME2 ~Eloran's Amulet~
-    SAY DESC ~Emblazoned with the Morninglord's symbol, this gold amulet grants its wearer greater attention in the eyes of <PRO_HISHER> god. It cannot be used by those who serve evil.
+    SAY NAME1 @38 /* ~Eloran's Amulet~ */
+    SAY NAME2 @38 /* ~Eloran's Amulet~ */
+    SAY DESC @39 /* ~Emblazoned with the Morninglord's symbol, this gold amulet grants its wearer greater attention in the eyes of <PRO_HISHER> god. It cannot be used by those who serve evil.
 
 Equipped abilities:
 – Double Divine Spellslots
 - Only usable by clerics
-- Can't be used by Evil ~
+- Can't be used by Evil ~ */
 
 COPY ~BloodAndFaith/items/g_bfci.itm~ ~override/g_bfci.itm~
-    SAY NAME1 ~Cloak of Ibrandul~
-    SAY NAME2 ~Cloak of Ibrandul~
-    SAY DESC ~Once worn by a follower of Ibrandul, the god of caverns, the cloak has taken on something of his darkness. Featherlight, it twists like a living shadow, and confers greater concealment at night.
+    SAY NAME1 @40 /* ~Cloak of Ibrandul~ */
+    SAY NAME2 @40 /* ~Cloak of Ibrandul~ */
+    SAY DESC @41 /* ~Once worn by a follower of Ibrandul, the god of caverns, the cloak has taken on something of his darkness. Featherlight, it twists like a living shadow, and confers greater concealment at night.
 
 Equipped abilities:
 - AC +1
 - Infravision
 - Move silently +10 (active at night)
-- Hide in Shadows +10 (active at night)~
+- Hide in Shadows +10 (active at night)~ */
 
 
 COPY ~BloodAndFaith/Areas/g_warren.are~ ~override~
