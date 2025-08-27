@@ -1354,32 +1354,74 @@ END
 IF ~~ THEN BEGIN evilRespect
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142,QUEST)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN ce2cn
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,CHAOTIC_NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN ne2tn
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 
 IF ~~ THEN BEGIN le2ln
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,LAWFUL_NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN evilYes
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 ///////////////////////////////////
 // Finale Results - Good
@@ -1389,25 +1431,57 @@ END
 IF ~~ THEN BEGIN cg2cn
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,CHAOTIC_NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN ng2tn
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) ~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN lg2ln
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	ChangeAlignment(Player1,LAWFUL_NEUTRAL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN notEvilYes
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142,QUEST_DONE)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 
@@ -1418,19 +1492,43 @@ END
 IF ~~ THEN BEGIN cn2ce
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_EVIL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,CHAOTIC_EVIL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN tn2ne
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL_EVIL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,NEUTRAL_EVIL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450) 
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN ln2le
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_EVIL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) ~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,LAWFUL_EVIL)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	EscapeArea()~ EXIT
 END
 
 ///////////////////////////////////
@@ -1440,21 +1538,48 @@ END
 IF ~~ THEN BEGIN cn2cg
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,CHAOTIC_GOOD)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 
 IF ~~ THEN BEGIN tn2ng
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,NEUTRAL_GOOD)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 
 IF ~~ THEN BEGIN ln2lg
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE)
+	ChangeAlignment(Player1,LAWFUL_GOOD)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	GiveItemCreate("g_bfiam",Player1,1,1,0)
+	EscapeArea()~ EXIT
 END
 
 
@@ -1466,12 +1591,26 @@ END
 IF ~~ THEN BEGIN notEvilNo
 	SAY @13306 /* Don't you dare quote things at me that you don't fully understand yourself! Goodbye, <CHARNAME>. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5141, QUEST_DONE) Kill(Myself) AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5141, QUEST_DONE)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	Kill(Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN fail
 	SAY @13307 /* Goodbye, <CHARNAME>. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5141, QUEST_DONE) Kill(Myself) AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5141, QUEST_DONE)
+	AddXPObject(Player1,450)
+	AddXPObject(Player2,450)
+	AddXPObject(Player3,450)
+	AddXPObject(Player4,450)
+	AddXPObject(Player5,450)
+	AddXPObject(Player6,450)
+	Kill(Myself)~ EXIT
 END
 END

@@ -60,21 +60,45 @@ END
 IF ~~ THEN BEGIN chrYes
 	SAY @9011 /* Hm… A place of our own to move into? No one trying to chase us out all the time or squash us? Hmm… We will try it. */
 IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4) ActionOverride("g_rk",EscapeArea()) ActionOverride("g_rat1",EscapeArea()) ActionOverride("g_rat2",EscapeArea()) ActionOverride("g_rat3",EscapeArea()) ActionOverride("g_rat5",EscapeArea()) ActionOverride("g_rat6",EscapeArea()) ActionOverride("g_rat7",EscapeArea()) ActionOverride("g_rat4",EscapeArea()) ~ EXIT
+	 SetGlobal("gBFq4","GLOBAL",4)
+	 ActionOverride("g_rat1",EscapeArea())
+	 ActionOverride("g_rat2",EscapeArea())
+	 ActionOverride("g_rat3",EscapeArea())
+	 ActionOverride("g_rat5",EscapeArea())
+	 ActionOverride("g_rat6",EscapeArea())
+	 ActionOverride("g_rat7",EscapeArea())
+	 ActionOverride("g_rat4",EscapeArea())
+	 ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 
 IF ~~ THEN BEGIN intYes
 	SAY @9011 /* Hm… A place of our own to move into? No one trying to chase us out all the time or squash us? Hmm… We will try it. */
 IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4) ActionOverride("g_rk",EscapeArea()) ActionOverride("g_rat1",EscapeArea()) ActionOverride("g_rat2",EscapeArea()) ActionOverride("g_rat3",EscapeArea()) ActionOverride("g_rat5",EscapeArea()) ActionOverride("g_rat6",EscapeArea()) ActionOverride("g_rat7",EscapeArea()) ActionOverride("g_rat4",EscapeArea()) ~ EXIT
+	 SetGlobal("gBFq4","GLOBAL",4)
+	 ActionOverride("g_rat1",EscapeArea())
+	 ActionOverride("g_rat2",EscapeArea())
+	 ActionOverride("g_rat3",EscapeArea())
+	 ActionOverride("g_rat5",EscapeArea())
+	 ActionOverride("g_rat6",EscapeArea())
+	 ActionOverride("g_rat7",EscapeArea())
+	 ActionOverride("g_rat4",EscapeArea())
+	 ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 
 IF ~~ THEN BEGIN strYes
 	SAY @9012 /* Wait, wait, wait! You seem strong. We don't want to fight you. We'll leave. */
 IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4) ActionOverride("g_rk",EscapeArea()) ActionOverride("g_rat1",EscapeArea()) ActionOverride("g_rat2",EscapeArea()) ActionOverride("g_rat3",EscapeArea()) ActionOverride("g_rat5",EscapeArea()) ActionOverride("g_rat6",EscapeArea()) ActionOverride("g_rat7",EscapeArea()) ActionOverride("g_rat4",EscapeArea()) ~ EXIT
+	 SetGlobal("gBFq4","GLOBAL",4)
+	 ActionOverride("g_rat1",EscapeArea())
+	 ActionOverride("g_rat2",EscapeArea())
+	 ActionOverride("g_rat3",EscapeArea())
+	 ActionOverride("g_rat5",EscapeArea())
+	 ActionOverride("g_rat6",EscapeArea())
+	 ActionOverride("g_rat7",EscapeArea())
+	 ActionOverride("g_rat4",EscapeArea())
+	 ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 //3 stat checks: CHR, INT, STR NO
