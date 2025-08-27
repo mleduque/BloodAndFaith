@@ -856,13 +856,13 @@ END
 IF ~~ THEN BEGIN necroYes
 	SAY @13205 /* Good. Lathander go with you. And take these arrows. They're quite useful against spellcasters. Ah, and your reward for your previous mission--a guard's ring. It may be helpful in the future. */
 IF ~~ THEN DO ~
-GiveItemCreate("RING07",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0)  GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5118, QUEST)~ EXIT
+GiveItemCreate("RING07",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5121, QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN necroYesDruid
 	SAY @13206 /* Good. Lathander go with you. And take these arrows. They're quite useful against spellcasters. Ah, and your reward for your previous mission--a druid's ring. It may be helpful in the future. */
 IF ~~ THEN DO ~
-GiveItemCreate("RING03",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0)  GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5118, QUEST)~ EXIT
+GiveItemCreate("RING03",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5121, QUEST)~ EXIT
 END
 
 /*
@@ -876,7 +876,7 @@ END
 IF ~~ THEN BEGIN necroYesMage
 	SAY @13207 /* Good. Lathander go with you. And take these arrows. They're quite useful against spellcasters. Ah, and your reward for your previous mission--a Ring of Acuity. It may be helpful in the future. */
 IF ~~ THEN DO ~
-GiveItemCreate("RING40",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0)  GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5118, QUEST)~ EXIT
+GiveItemCreate("RING40",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) GiveItemCreate("AROW05",Player1,1,1,0) SetGlobal("gBFq8","GLOBAL",1) AddJournalEntry(@5121, QUEST)~ EXIT
 END
 
 IF ~Global("gBFq8","GLOBAL",1) !Dead("g_necro")~ THEN BEGIN necroDoIt
