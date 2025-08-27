@@ -21,11 +21,11 @@ END
 
 IF
     Global ("g_sFirstHeal", "GLOBAL", 0)
-    HPPercentLT("Myself",40)
+    HPPercentLT(Myself,40)
 THEN
     RESPONSE #100
         SetGlobal ("g_sFirstHeal", "GLOBAL", 1)
-        ForceSpell("Myself",CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
 
 END
 
@@ -41,10 +41,10 @@ END
 
 IF
         Global ("g_sSecHeal", "GLOBAL", 0)
-	HPPercentLT("Myself",40)
+	HPPercentLT(Myself,40)
 THEN
     RESPONSE #100
-        ForceSpell("Myself",CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
 	SetGlobal ("g_sSecHeal", "GLOBAL", 1)
 END
 
