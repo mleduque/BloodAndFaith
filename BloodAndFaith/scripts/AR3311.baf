@@ -1,10 +1,29 @@
 //spawns the homeowner man with the ghost problem
 
 IF
-Global("GhoManSp","GLOBAL",0) Global("gBFq1","GLOBAL",1) 
+	Global("GhoManSp","MYAREA",0)
+	Global("gBFq1","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("g_bfhom",[414.262],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GhoManSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		//Deactivate("FTOBE3") // Female Townsfolk Beregost_House12_L1_BCS
+		CreateCreature("g_bfhom",[414.262],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GhoManSp","MYAREA",1)
+		SetGlobal("gBFq1_ar3311","MYAREA",1)
+		Continue()
 END
+
+IF
+	Delay(1)
+	!Global("GhoManSp","MYAREA",0)
+	OR(3)
+		Dead("g_bfhom")
+		!Exists("g_bfhom")
+		Global("gBFq1_ar3311","MYAREA",2)
+THEN
+	RESPONSE #100
+		SetGlobal("gBFq1_ar3311","MYAREA",0)
+		 ActionOverride("FTOBE3",SetNumTimesTalkedTo(0))
+		//Activate("FTOBE3") // Female Townsfolk Beregost_House12_L1_BCS
+		Continue()
+END
+

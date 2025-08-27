@@ -1,10 +1,38 @@
 //spawns homeowner woman with rat probelm
 
 IF
-Global("GwomanSp","GLOBAL",0) Global("gBFq4","GLOBAL",1) 
+	Global("GwomanSp","MYAREA",0) Global("gBFq4","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("g_bfhow",[408.265],3)  
-SetGlobal("GwomanSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		//ActionOverride("MTBE8",Deactivate(Myself)) // Male Townsfolk Beregost_House23_L1_BCS
+		CreateCreature("g_bfhow",[408.265],3)
+		SetGlobal("GwomanSp","MYAREA",1)
+		SetGlobal("gBFq4_ar3325","MYAREA",1)
+		Continue()
+END
+
+IF
+	Delay(1)
+	!Global("GwomanSp","MYAREA",0)
+	OR(3)
+		Dead("g_bfhow")
+		!Exists("g_bfhow")
+		Global("gBFq4_ar3325","MYAREA",2)
+THEN
+	RESPONSE #100
+		SetGlobal("gBFq4_ar3325","MYAREA",0)
+		//ActionOverride("MTBE8",Activate(Myself)) // Male Townsfolk Beregost_House23_L1_BCS
+		Continue()
+END
+
+IF
+	Delay(2)
+	!Global("GwomanSp","MYAREA",0)
+	Global("gBFq4_ar3325","MYAREA",0)
+	Global("gBFq4_MTBE8","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("gBFq4_ar3325","MYAREA",0)
+		ActionOverride("MTBE8",SetNumTimesTalkedTo(0))
+		Continue()
 END
