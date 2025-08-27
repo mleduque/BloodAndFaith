@@ -1,20 +1,22 @@
 //spawns Arteger in the Temple of Helm in the Gate
 
 IF
-Global("GartegerSp","GLOBAL",0) Global("gBFq12","GLOBAL",1)
+	Global("GartegerSp","MYAREA",0)
+	Global("gBFq12","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("g_bart",[366.322],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GartegerSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("g_bart",[366.322],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GartegerSp","MYAREA",1)
+		Continue()
 END
 
 
 IF
-	Global("GeloranSp2","GLOBAL",0) Global("gBFq12","GLOBAL",2)
-	THEN
+	Global("GeloranSp2","MYAREA",0)
+	Global("gBFq12","GLOBAL",2)
+THEN
 	RESPONSE #100
 	CreateCreature("g_eloran",[366.322],3)  
-	SetGlobal("GeloranSp2","GLOBAL",1)
+	SetGlobal("GeloranSp2","MYAREA",1)
 	Continue()
 END

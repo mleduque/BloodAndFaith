@@ -1,13 +1,13 @@
 //spawns cloakwood Zhents
 IF
-Global("GcwzhentSp","GLOBAL",0) Global("gBFq11","GLOBAL",1)
+	Global("GcwzhentSp","MYAREA",0)
+	Global("gBFq11","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("g_rZhent",[3700.3050],3)  
-CreateCreature("g_bZhent",[3785.3140],3)  
-CreateCreature("g_bZhen2",[3842.3085],3) 
-CreateCreature("g_bZhen3",[3794.3139],3) 
-SetGlobal("GcwzhentSp","GLOBAL",1)
-
-Continue()
+	RESPONSE #100
+	CreateCreature("g_rZhent",[3700.3050],3)  
+	CreateCreature("g_bZhent",[3785.3140],3)  
+	CreateCreature("g_bZhen2",[3842.3085],3) 
+	CreateCreature("g_bZhen3",[3794.3139],3) 
+	SetGlobal("GcwzhentSp","MYAREA",1)
+	Continue()
 END

@@ -1,10 +1,11 @@
 //spawns the homeowner man with the ghost problem
 
 IF
-Global("GghostSp","GLOBAL",0) Global("gBFq1","GLOBAL",1) 
+	Global("GghostSp","MYAREA",0)
+	Global("gBFq1","GLOBAL",1) 
 THEN
-RESPONSE #100
-CreateCreature("g_bfgho",[431.230],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GghostSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("g_bfgho",[431.230],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GghostSp","MYAREA",1)
+		Continue()
 END

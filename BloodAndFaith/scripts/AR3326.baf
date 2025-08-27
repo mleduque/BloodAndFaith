@@ -1,18 +1,18 @@
 //spawns rats
 
 IF
-Global("GratSp","GLOBAL",0) Global("gBFq4","GLOBAL",1) 
+	Global("GratSp","MYAREA",0)
+	Global("gBFq4","GLOBAL",1) 
 THEN
-RESPONSE #100
-CreateCreature("g_rat1",[314.285],3) 
-CreateCreature("g_rat2",[335.160],3)  
-CreateCreature("g_rat3",[152.333],3)  
-CreateCreature("g_rat4",[156.271],3)  
-CreateCreature("g_rat5",[253.339],3)  
-CreateCreature("g_rat6",[550.235],3)  
-CreateCreature("g_rat7",[439.150],3)  
-CreateCreature("g_rk",[397.273],3)  
-SetGlobal("GratSp","GLOBAL",1)
-
-Continue()
+	RESPONSE #100
+		CreateCreature("g_rat1",[314.285],3) 
+		CreateCreature("g_rat2",[335.160],3)  
+		CreateCreature("g_rat3",[152.333],3)  
+		CreateCreature("g_rat4",[156.271],3)  
+		CreateCreature("g_rat5",[253.339],3)  
+		CreateCreature("g_rat6",[550.235],3)  
+		CreateCreature("g_rat7",[439.150],3)  
+		CreateCreature("g_rk",[397.273],3)  
+		SetGlobal("GratSp","MYAREA",1)
+		Continue()
 END

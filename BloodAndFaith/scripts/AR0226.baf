@@ -1,10 +1,10 @@
 //spawns doppelganger
-IF
-Global("GdopSp","GLOBAL",0) Global("gBFq14","GLOBAL",1)
-THEN
-RESPONSE #100
-CreateCreature("g_dop",[921.290],3)  
-SetGlobal("GdopSp","GLOBAL",1)
 
-Continue()
+IF
+	Global("GdopSp","MYAREA",0) Global("gBFq14","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("g_dop",[921.290],3)  
+		SetGlobal("GdopSp","MYAREA",1)
+		Continue()
 END

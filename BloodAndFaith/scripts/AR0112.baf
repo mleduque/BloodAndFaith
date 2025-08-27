@@ -6,10 +6,10 @@ IF
 	Global("gBFq15","GLOBAL",1) 
 THEN
 	RESPONSE #100
-	CreateCreature("g_mordyj",[2069.420],3)
-	CreateCreature("g_bfcle",[2069.500],3)  
-	SetGlobal("GmordySp","GLOBAL",1)
-	Continue()
+		CreateCreature("g_mordyj",[2069.420],3)
+		CreateCreature("g_bfcle",[2069.500],3)  
+		SetGlobal("GmordySp","GLOBAL",1)
+		Continue()
 END
 
 IF
@@ -17,8 +17,8 @@ IF
 	Global("gBFq15","GLOBAL",1) 
 THEN
 	RESPONSE #100
-	CreateCreature("g_mordy",[2069.420],3)
-	CreateCreature("g_bfcle",[2069.500],3)  
-	SetGlobal("GmordySp","GLOBAL",1)
-	Continue()
+		CreateCreature("g_mordy",[2069.420],3)
+		CreateCreature("g_bfcle",[2069.500],3)  
+		SetGlobal("GmordySp","GLOBAL",1)
+		Continue()
 END
