@@ -85,6 +85,19 @@ ADD_JOURNAL TITLE (@5099) @5100 @5101 @5102 @5103 @5104 @5105 @5106 @5107 @5108 
 
 COPY ~BloodAndFaith/portraits/all~ ~override~
 
+LAF HANDLE_AUDIO END
+ADD_MUSIC ~g_bff~ ~%MOD_FOLDER%/music/g_bff.mus~
+ADD_MUSIC ~g3blank~ ~%MOD_FOLDER%/music/g3blank.mus~
+
+//COPY ~%MOD_FOLDER%/music/g_bffa.acm~ ~MUSIC/g_bff/g_bffa.acm~
+COPY ~%MOD_FOLDER%/music/g_bff.ogg~ ~MUSIC/g_bff/g_bff.ogg~
+COPY ~%MOD_FOLDER%/music/g_bff.ogg~ ~MUSIC/g_bff/g_bff.ogg~
+COPY ~%MOD_FOLDER%/music/blanka.acm~ ~MUSIC/g_bff/blanka.acm~
+COPY ~%MOD_FOLDER%/music/blank.wav~ ~MUSIC/g_bff/blank.wav~
+
+
+COPY_EXISTING ~songlist.2da~ ~override~
+    SET_2DA_ENTRY 0 2 3 ~g_blank.mus~
 
 //spawns
 EXTEND_TOP ~%NBaldursGate_TempleofHelm_BCS%.bcs~ ~BloodAndFaith/Scripts/AR0002.baf~ //spawns arty
@@ -110,6 +123,14 @@ EXTEND_TOP ~%LonelyPeaks_BCS%.bcs~ ~BloodAndFaith/Scripts/AR4400.baf~ //spawns c
 COMPILE ~BloodAndFaith/Scripts/g_BFat.baf~
 COMPILE ~BloodAndFaith/Scripts/g_BFat2.baf~
 COMPILE ~BloodAndFaith/Scripts/g_BFat3.baf~
+COMPILE ~BloodAndFaith/Scripts/g_BFmal.baf~
+COMPILE ~BloodAndFaith/Scripts/g_BFmalF.baf~
+COMPILE ~BloodAndFaith/Scripts/g_BFmorC.baf~
+COMPILE ~BloodAndFaith/Scripts/g_BFmord.baf~
+COMPILE ~BloodAndFaith/Scripts/g_BFmorj.baf~
+
+COPY ~%MOD_FOLDER%/spells/g_bfci.spl~         ~override~
+
 
 //dialogues
 COMPILE ~BloodAndFaith/dialogues/d_BF3gk.d~
@@ -126,9 +147,12 @@ COMPILE ~BloodAndFaith/dialogues/d_gBFdop.d~
 COMPILE ~BloodAndFaith/dialogues/d_gBFdrZ.d~
 COMPILE ~BloodAndFaith/dialogues/d_gBFlov.d~
 COMPILE ~BloodAndFaith/dialogues/d_gBFmor.d~
+COMPILE ~BloodAndFaith/dialogues/d_gBFmorj.d~
 COMPILE EVALUATE_BUFFER ~BloodAndFaith/dialogues/d_gBFmqg.d~
 COMPILE ~BloodAndFaith/dialogues/d_gBFzh1.d~
 COMPILE ~BloodAndFaith/dialogues/d_gBFzl.d~
+COMPILE ~BloodAndFaith/dialogues/d_gBFmal.d~
+
 
 //creatures
 COPY ~BloodAndFaith/creatures/g_bart.cre~ ~override/g_bart.cre~ 
@@ -192,6 +216,10 @@ COPY ~BloodAndFaith/creatures/g_bZhen3.cre~ ~override/g_bZhen3.cre~ //
 	SAY NAME1 @13 /* Evil Zhent */
 	SAY NAME2 @13 /* Evil Zhent */
 
+COPY ~BloodAndFaith/creatures/g_bfcle.cre~ ~override/g_bfcle.cre~ //
+	SAY NAME1 @13 /* Evil Zhent */
+	SAY NAME2 @13 /* Evil Zhent */
+
 COPY ~BloodAndFaith/creatures/g_dop.cre~ ~override/g_dop.cre~ //
 	SAY NAME1 @14 /* Friendly Dop */
 	SAY NAME2 @14 /* Friendly Dop */
@@ -203,6 +231,30 @@ COPY ~BloodAndFaith/creatures/g_lovi.cre~ ~override/g_lovi.cre~ //
 COPY ~BloodAndFaith/creatures/g_mordy.cre~ ~override/g_mordy.cre~ //
 	SAY NAME1 @16 /* Mordiyin */
 	SAY NAME2 @16 /* Mordiyin */
+	SAY BATTLE_CRY1 ~~ [g_bma1]
+	SAY BATTLE_CRY2 ~~ [g_bma2]
+	SAY BATTLE_CRY3 ~~ [g_bma3]
+	SAY BATTLE_CRY4 ~~ [g_bma4]
+	SAY BATTLE_CRY5 ~~ 
+	SAY DAMAGE ~~ [g_bmou]
+	SAY DYING ~~ [g_bmde]
+
+COPY ~BloodAndFaith/creatures/g_mordyj.cre~ ~override/g_mordyj.cre~ //
+	SAY NAME1 @16 /* Mordiyin */
+	SAY NAME2 @16 /* Mordiyin */
+	SAY BATTLE_CRY1 ~~ [g_bma1]
+	SAY BATTLE_CRY2 ~~ [g_bma2]
+	SAY BATTLE_CRY3 ~~ [g_bma3]
+	SAY BATTLE_CRY4 ~~ [g_bma4]
+	SAY BATTLE_CRY5 ~~ 
+	SAY DAMAGE ~~ [g_bmou]
+	SAY DYING ~~ [g_bmde]
+
+
+
+
+
+
 
 COPY ~BloodAndFaith/creatures/g_necro.cre~ ~override/g_necro.cre~ //
 	SAY NAME1 @17 /* Necromancer */
@@ -257,6 +309,10 @@ COPY ~BloodAndFaith/creatures/gg_malar.cre~ ~override/gg_malar.cre~ //
 	SAY NAME1 @23 /* Malarite */
 	SAY NAME2 @23 /* Malarite */
 
+COPY ~BloodAndFaith/creatures/gg_malaF.cre~ ~override/gg_malaF.cre~ //
+	SAY NAME1 @23 /* Malarite */
+	SAY NAME2 @23 /* Malarite */
+
 COPY ~BloodAndFaith/creatures/gg_can.cre~ ~override/gg_can.cre~ //
 	SAY NAME1 @24 /* Lenovela the Cannibal */
 	SAY NAME2 @24 /* Lenovela the Cannibal */
@@ -275,6 +331,75 @@ COPY ~BloodAndFaith/items/gBFed.itm~ ~override/gBFed.itm~
     SAY NAME2 @28 /* Encoded Documents */
     SAY DESC @29 /* This documents are encoded in a way that you've never seen before. */
 
+COPY ~BloodAndFaith/items/g_bfiMs.itm~ ~override/g_bfiMs.itm~
+    SAY NAME1 ~Mordiyin's Sword~
+    SAY NAME2 ~Mordiyin's Sword~
+SAY UNIDENTIFIED_DESC ~Something seems off about this sword.~
+    SAY DESC ~Taken from Mordiyin, a Zhent agent who specialized in hunting down defectors, this is a thoroughly evil weapon. Over the years, it has tasted the blood of many, and it thirsts for battle, for it is unnervingly proficient when wielded against humanoid foes. It glows with a chill light, and anyone not of evil intent finds that its touch burns too much to wield it.
+
+STATISTICS:
+
+THAC0: +1, +3 vs. humanoid
+Damage: 1d8+1, +3 vs. humanoid
+Damage type: Slashing
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+ Cannot be used by Good-aligned character
+
+Weight: 4 ~
+
+COPY ~BloodAndFaith/items/g_bfcl.itm~ ~override/g_bfcl.itm~
+    SAY NAME1 ~Beast Claw of Malar~
+    SAY NAME2 ~Beast Claw of Malar~
+    SAY DESC ~ Said to be a claw taken from one of Malar's favored beasts, this ring reeks of blood and pulsates slightly to the touch. The wearer is imbued with the Beastlord's stealth and ferocity, but at the cost of <PRO_HISHER> judgment and social graces.
+
+
+Equipped abilities:
+– Armor Class: +1, an extra +4 vs. missile attacks
+– +10% Hide in Shadows
+– +10% Move Silently
+- +2 Speed Modifier
+– -2 Wisdom
+- -3 Charisma
+– May only be removed with a Remove Curse spell~
+
+
+COPY ~BloodAndFaith/items/g_bfist.itm~ ~override/g_bfist.itm~
+    SAY NAME1 ~Spinal Staff~
+    SAY NAME2 ~Spinal Staff~
+    SAY DESC ~The remains of some necromancer's victim, a trace of the agony felt by the spine's original owner can still be felt. It renders the bearer repellent in the eyes of others, but the magical power it grants is difficult to argue with. Sometimes it shifts in the hand as though still alive.
+
+
+Equipped abilities:
+– THAC0 +1
+– Double wizard spells
+- -3 Charisma
+- -2 Constitution
+- Can't be used by Good ~
+
+COPY ~BloodAndFaith/items/g_bfiam.itm~ ~override/g_bfiam.itm~
+    SAY NAME1 ~Eloran's Amulet~
+    SAY NAME2 ~Eloran's Amulet~
+    SAY DESC ~Emblazoned with the Morninglord's symbol, this gold amulet grants its wearer greater attention in the eyes of <PRO_HISHER> god. It cannot be used by those who serve evil.
+
+Equipped abilities:
+– Double Divine Spellslots
+- Only usable by clerics
+- Can't be used by Evil ~
+
+COPY ~BloodAndFaith/items/g_bfci.itm~ ~override/g_bfci.itm~
+    SAY NAME1 ~Cloak of Ibrandul~
+    SAY NAME2 ~Cloak of Ibrandul~
+    SAY DESC ~Once worn by a follower of Ibrandul, the god of caverns, the cloak has taken on something of his darkness. Featherlight, it twists like a living shadow, and confers greater concealment at night.
+
+Equipped abilities:
+- AC +1
+- Infravision
+- Move silently +10 (active at night)
+- Hide in Shadows +10 (active at night)~
 
 
 COPY ~BloodAndFaith/Areas/g_warren.are~ ~override~

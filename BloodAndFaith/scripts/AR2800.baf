@@ -1,3 +1,13 @@
+//spawns Malarite
+IF
+	Global("GbmalarSp","GLOBAL",0) Global("gBFq2","GLOBAL",1) 
+	THEN
+	RESPONSE #100
+	CreateCreature("gg_malaF",[2536.3256],3)  
+	SetGlobal("GbmalarSp","GLOBAL",1)
+	Continue()
+END
+
 //spawns zhent1
 
 

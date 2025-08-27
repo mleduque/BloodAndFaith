@@ -18,16 +18,40 @@ Features:
 /////////////////////
 //CREDITS
 /////////////////////
+DawnGlyph (Lena de Jong) for Eloran's voice
+	Discord: dawnglyph
+	CastingCallClub: https://www.castingcall.club/dawnglyph
 doli-namae for Eloran's portrait
-Glittergear did everything else
+	Discord: doli_nemae
+	Tumblr: https://www.tumblr.com/doli-nemae
+Max Lefferts for the final boss's voice and soundset (both versions)
+	Discord: maxlva
+	CastingCallClub: https://www.castingcall.club/Max-L
 11jo for the EET compatibility, tra-ification, and all tweaks/fixes/polishing between v1.0 and v1.1
+Final boss music: "Fearless" by Kulakovka -- https://pixabay.com/music/main-title-fearless-final-boss-battle-epic-274997/
+Final boss joke music: https://pixabay.com/users/muzaproduction-24990238/
+Glittergear did everything else (I'm Glittergear basically everywhere)
+
+
+/////////////////////
+//PERMISSIONS
+/////////////////////
+Do not use AI with Lena de Jong's voice at all for any reason
+Do not use AI with Max Lefferts's voice at all for any reason
+Do not use AI with doli's portrait at all for any reason
+Feel free to mod the mod however you want for personal use, just don't reupload/claim as your own/etc
+
+Feel free to translate the mod into other languages
+
 
 /////////////////////
 //THANKS TO
 /////////////////////
-Moggadeet, for being my partner in crime and for helping with the Loviatan
+Moggadeet, for being my partner in crime and for helping with the Loviatan, AND writing the item descriptions
 jastey, for helping me (once again) with that area transition to the Warrens.
 Trouveur for the bug reporting
+11jo for all the help and patience
+The Artisan for answering so many of my questions
 Tel Shadow, Superduple, and AlandroSul for helping me make this mod within Morrowind.
 
 /////////////////////
@@ -54,15 +78,37 @@ None known. Let me know if you find any.
 /////////////////////
 //KNOWN ISSUES
 /////////////////////
-- The Zhent Agent that you kill initially has the green circle/is under player control
 - The Renegade Zhent in the Cloakwood sometimes turns hostile if you have Party AI on.
-- Sometimes you don't get XP for killing stuff. This is INTENTIONAL, as you get XP for completing the quests instead.
+- Depending on your in-game audio preferences, Eloran might be a bit quiet. If that's the case, you can go into your audio preferences in-game and either turn up the NPC voices or turn down the background music.
+- Depending on your in-game audio preferences, the final boss might also be a bit quiet.
 
 If you find anything else, ping me on Discord or post it to the G3 forums.
+
+
+/////////////////////
+//FINAL BOSS
+/////////////////////
+- There is a 5% change that you will get the easter egg final boss instead of the regular one. This came from a conversation and joke that Max and I had. Both final bosses are equally difficult; the tone is just very very different.
+- If you can't beat the final boss: Sorcerous Sundries sells potion of clarity and scrolls of Resist Fear and a scroll of slow, which should help. He's immune to fear, but he's not immune to confusion and feeblemind, so if worst comes to worst, you can try that.
+- Why don't Xzar/Monty talk with the final boss? Final boss considers them acceptable collateral damage, and thus doesn't care to talk to them.
+
 
 /////////////////////
 //CHANGELOG
 /////////////////////
+1.2 Voice acting and more!
+	Full voiceacting for Eloran!
+	Voiceacting and soundset for the final boss!
+	Made the Rat King stat check more difficult (now you need a 17+, instead of 16+, in a relevant stat)
+	Made Malarite battle a bit tougher, since now he casts spells
+	Added small Malarite scene outside the Warrens so it's easier to know where to look
+	Gave final boss a cleric companion
+	Gave final boss some battle music
+	Accidentally broke the tra-ification by adding some dialogue and items
+	New items! Now, some bosses have unique loot
+	Nerfed the necromancer boss a bit
+	
+1.1 Lots of Bugfixing, Tra-ification, and polish
 1.0 Full Release -- Bugfixes and Polish
 	REQUIRES A NEW SAVE
 	Eloran will give you the questline without you needing to kill Bassilus first

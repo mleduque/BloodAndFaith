@@ -4,12 +4,12 @@ IF ~True()~ THEN BEGIN 0
 	SAY @9000 /* You’re here to get rid of us, are you? Well, I’m not moving out, unless you can find me something better! */
 	++ @9001 /* Why are you here? */ GOTO whyTho
 	++ @9002 /* What do you want? */ GOTO whatWant
-	+ ~CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
-	+ ~!CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
-	+ ~CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
-	+ ~!CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
-	+~CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
-	+~!CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
+	+ ~CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
+	+ ~!CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
+	+ ~CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
+	+ ~!CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
+	+~CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
+	+~!CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
 	+~Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTime
 	+~!Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTimetwo
 END
@@ -19,12 +19,12 @@ END
 IF ~~ THEN BEGIN whyTho
 	SAY @9007 /* We live here. It’s a nice house. */ 
 	++ @9002 /* What do you want? */ GOTO whatWant
-	+ ~CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
-	+ ~!CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
-	+ ~CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
-	+ ~!CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
-	+~CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
-	+~!CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
+	+ ~CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
+	+ ~!CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
+	+ ~CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
+	+ ~!CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
+	+~CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
+	+~!CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
 	+~Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTime
 	+~!Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTimetwo
 
@@ -34,12 +34,12 @@ END
 IF ~~ THEN BEGIN whatWant
 	SAY @9008 /* We just want to live in peace together. Happy, healthy, well fed. */
 	++ @9001 /* Why are you here? */ GOTO whyTho
-	+ ~CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
-	+ ~!CheckStatGT(Player1,15,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
-	+ ~CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
-	+ ~!CheckStatGT(Player1,15,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
-	+~CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
-	+~!CheckStatGT(Player1,15,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
+	+ ~CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrYes
+	+ ~!CheckStatGT(Player1,16,CHR)~+ @9003 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there. */ GOTO chrNo
+	+ ~CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intYes
+	+ ~!CheckStatGT(Player1,16,INT)~+ @9004 /* [Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers. */ GOTO intNo
+	+~CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strYes
+	+~!CheckStatGT(Player1,16,STR)~+ @9005 /*  [Intimidate] I’m going to kill you. */ GOTO strNo
 	+~Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTime
 	+~!Global("gBFq4","GLOBAL",1)~+ @9006 /* Hm. I'll come back later. */ GOTO stallTimetwo
 

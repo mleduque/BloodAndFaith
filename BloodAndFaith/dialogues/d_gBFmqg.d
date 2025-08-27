@@ -137,7 +137,6 @@ IF ~Global ("GGBFMQ","GLOBAL",0) !Alignment(Player1,MASK_EVIL)~ THEN BEGIN 1g
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
@@ -154,7 +153,7 @@ IF ~Global ("GGBFMQ","GLOBAL",0) Alignment(Player1,MASK_EVIL)~ THEN BEGIN 1e
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
@@ -168,7 +167,7 @@ IF ~~ THEN BEGIN 1necro
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
@@ -180,8 +179,8 @@ IF ~~ THEN BEGIN 1maleEvil
 	SAY @13066 /* I did notice, yes. He’s rather hard to miss. But Lathander preaches redemption, and how can Evil redeem itself if not given a chance? Anything else? */
 	+ ~Kit(Player1,MAGESCHOOL_NECROMANCER)~ + @13053 /* You realize that I’m a necromancer, right? */ GOTO 1necro
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
-	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
 	++ @13062 /* I'll do it. */ GOTO 1yes
@@ -194,7 +193,7 @@ IF ~~ THEN BEGIN 1femaleEvil
 	+ ~InParty("Dorn")~ + @13054 /* You see I'm travelling with Dorn, right? */ GOTO 1maleEvil
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
@@ -223,7 +222,7 @@ IF ~~ THEN BEGIN 1expect
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
 	++ @13062 /* I'll do it. */ GOTO 1yes
@@ -237,7 +236,7 @@ IF ~~ THEN BEGIN 1rewards
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13061 /* What kind of Lathanderite are you, seeking to hire a bounty hunter? */ GOTO 1just
 	++ @13062 /* I'll do it. */ GOTO 1yes
@@ -251,7 +250,7 @@ IF ~~ THEN BEGIN 1just
 	+ ~InParty("Tiax")~ + @13055 /* You see I'm travelling with Tiax, right? */ GOTO 1maleEvil
 	+ ~InParty("Xzar")~ + @13056 /* You see I'm travelling with Xzar, right? */ GOTO 1maleEvil
 	+ ~InParty("Viconia")~ + @13057 /* You see I'm travelling with Viconia, right? */ GOTO 1femaleEvil
-	++ @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
+	+ ~Alignment(Player1,MASK_EVIL)~ + @13058 /* You do realize I'm Sharran, right? */ GOTO 1sharran
 	++ @13059 /* What exactly do you expect me to do? */ GOTO 1expect
 	++ @13060 /* What are the rewards? */ GOTO 1rewards
 	++ @13062 /* I'll do it. */ GOTO 1yes
@@ -309,7 +308,7 @@ IF ~~ THEN BEGIN 2reward
 	SAY @13083 /* Good work, <CHARNAME>. Take these potions as a reward. You’ve earned them, and they’ll prove useful in this next task, I suspect. Remember how I said that not all problems can be solved with violence? Well, I have a feeling that this problem can *only* be solved with violence. Travelers have been disappearing between Beregost and the Friendly Arm Inn. At first, we thought it was bandits. Eventually, there was a survivor, and we now know that this is no bandit—this is a follower of Malar. Malarites believe that only the strongest deserve to survive, and so violence is the only language that they understand. Find the Malarite in the Coast Way and kill him. Any questions? */
 	++ @13084 /* What can you tell me about Malar? */ GOTO 3lore
 	++ @13085 /* Should I at least try to talk to him? I thought Lathander believes in redemption. */ GOTO 3lath
-	++ @13086 /* Why are you sending me on this mission? I could die. */ GOTO 3die
+	//++ @13086 /* Why are you sending me on this mission? I could die. */ GOTO 3die
 	++ @13087 /* Any idea where the Malarite is hiding? */ GOTO 3where
 	++ @13088 /* No more questions. I’m on it. */ GOTO 3yes
 END
@@ -317,7 +316,7 @@ END
 IF ~~ THEN BEGIN 3lore
 	SAY @13089 /* Malar is the malevolent god of the hunt. Bloodthirsty, feral, and savage, he encourages the worst in his followers, and they revel in such things. He has an alliance with deities like Lolth and Loviatar, insofar as they are capable of having alliances. Bloodthirsty and violent deities aren’t the most… well, they don’t cooperate well with others. Expect some sort of predator-prey dynamic or a very twisted game of hide-and-seek. Anything else? */
 	++ @13085 /* Should I at least try to talk to him? I thought Lathander believes in redemption. */ GOTO 3lath
-	++ @13086 /* Why are you sending me on this mission? I could die. */ GOTO 3die
+	// ++ @13086 /* Why are you sending me on this mission? I could die. */ GOTO 3die
 	++ @13087 /* Any idea where the Malarite is hiding? */ GOTO 3where
 	++ @13088 /* No more questions. I’m on it. */ GOTO 3yes
 END
@@ -331,7 +330,7 @@ IF ~~ THEN BEGIN 3lath
 END
 
 IF ~~ THEN BEGIN 3die
-	SAY @13091 /* You survived—and even killed—Bassilus, didn’t you? Besides, if a commoner managed to escape this Malarite, I’m sure you’ll be fine. And I just gave you a few healing potions. */
+	SAY @13091 /* If a commoner managed to escape this Malarite, I’m sure you’ll be fine. And I just gave you a few healing potions. */
 	++ @13084 /* What can you tell me about Malar? */ GOTO 3lore
 	++ @13085 /* Should I at least try to talk to him? I thought Lathander believes in redemption. */ GOTO 3lath
 	++ @13087 /* Any idea where the Malarite is hiding? */ GOTO 3where
@@ -483,34 +482,34 @@ END
 
 IF ~~ THEN BEGIN 3debrieflol
 	SAY @13127 /* Ha! Fair enough, <CHARNAME>, fair enough. That is one thing that I appreciate about you. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
-   IncrementGlobal("gBFrsP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+   IncrementGlobal("gBFrsP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)  GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN 3debriefSmite
 	SAY @13128 /* And how do you determine what is necessary? How do you decide when to let Evil live, and when to condemn Evil to die? If we killed Evil whenever we see it, no one would get a chance to redeem themselves. We’d be damning everyone we come across. But if we let Evil live all the time, would we be partially responsible for the evil acts that they commit later? Hm. But I suppose there’s no point in musing about it now. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
- IncrementGlobal("gBFdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+ IncrementGlobal("gBFdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150) GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN 3debriefbalance
 	SAY @13129 /* The darkness helps us appreciate the dawn, is that it? Hm. Not sure I agree with that, but there’s no time for musings. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
-SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150) GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 
 IF ~~ THEN BEGIN 3debriefviolent
 	SAY @13130 /* And who would be the instigator in such a situation? Sometimes, who we perceive as an enemy can give us a pleasant surprise. Perhaps it is wiser to stay your hand and see what comes of the situation. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
-IncrementGlobal("gBFdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+IncrementGlobal("gBFdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150) GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN 3debriefexample
 	SAY @13131 /* And then if they get curious enough, they can learn more themselves, is that it? That sometimes works. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
-IncrementGlobal("gBFrdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+IncrementGlobal("gBFrdP","GLOBAL",1)  SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150) GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 
 IF ~~ THEN BEGIN 3debriefidk
 	SAY @13132 /* You might want to think about it–something like this may happen sooner than you expect. Talk to me again when you're ready for something to do. */ IF ~~ THEN DO ~
-SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150)~ EXIT
+SetGlobal("GGBFMQ","GLOBAL",4) AddJournalEntry(@5107, QUEST) AddXPObject(Player1,150) AddXPObject(Player2,150) AddXPObject(Player3,150) AddXPObject(Player4,150) AddXPObject(Player5,150) AddXPObject(Player6,150) GiveItemCreate("g_bfci",Player1,1,1,0)~ EXIT
 END
 
 
@@ -1355,26 +1354,26 @@ END
 IF ~~ THEN BEGIN evilRespect
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN ce2cn
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN ne2tn
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 
 IF ~~ THEN BEGIN le2ln
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN evilYes
@@ -1396,7 +1395,7 @@ END
 IF ~~ THEN BEGIN ng2tn
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) ~ EXIT
 END
 
 IF ~~ THEN BEGIN lg2ln
@@ -1408,7 +1407,7 @@ END
 IF ~~ THEN BEGIN notEvilYes
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 
@@ -1431,7 +1430,7 @@ END
 IF ~~ THEN BEGIN ln2le
 	SAY @13305 /* You truly believe that, don’t you? Fine. I just hope that I don’t make things worse somehow. Gods know I’ve done enough damage already. Since you want me to stay alive so badly, I’ll… I’ll have to leave the Gate. now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. I hope this isn’t just another mistake. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_EVIL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_EVIL) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) ~ EXIT
 END
 
 ///////////////////////////////////
@@ -1441,21 +1440,21 @@ END
 IF ~~ THEN BEGIN cn2cg
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,CHAOTIC_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 
 IF ~~ THEN BEGIN tn2ng
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,NEUTRAL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 
 IF ~~ THEN BEGIN ln2lg
 	SAY @13304 /* Perhaps... Do you really have that much faith in me, <CHARNAME>, even now knowing what I am - what I was? You believe that I still should have a chance? I... I need to think about this. And I can't stay in the Gate any longer, now that the Zhentarim know I'm here. Goodbye, <CHARNAME>. And thank you. */
 IF ~~ THEN DO ~
-	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450)~ EXIT
+	AddJournalEntry(@5142, QUEST_DONE) ChangeAlignment(Player1,LAWFUL_GOOD) EscapeArea() AddXPObject(Player1,450) AddXPObject(Player2,450) AddXPObject(Player3,450) AddXPObject(Player4,450) AddXPObject(Player5,450) AddXPObject(Player6,450) GiveItemCreate("g_bfiam",Player1,1,1,0)~ EXIT
 END
 
 
