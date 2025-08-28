@@ -1,10 +1,10 @@
 IF
 	Range([PC],16)
 	See([PC])
-	Global("doOnce3","GLOBAL",0)
+	Global("doOnce3","LOCALS",0)
 THEN
 	RESPONSE #100
 		StartDialogueNoSet([PC])
-		SetGlobal("doOnce3","GLOBAL",1)
+		SetGlobal("doOnce3","LOCALS",1)
 END
 

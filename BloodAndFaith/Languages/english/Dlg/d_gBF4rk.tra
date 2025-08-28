@@ -1,9 +1,9 @@
 @9000 = ~You’re here to get rid of us, are you? Well, I’m not moving out, unless you can find me something better!~
 @9001 = ~Why are you here?~
 @9002 = ~What do you want?~
-@9003 = ~[Persuade] There’s a warren just to the north that a Malarite used to live in. You could move there.~
-@9004 = ~[Persuade] There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers.~
-@9005 = ~ [Intimidate] I’m going to kill you.~
+@9003 = ~(Charisma Persuade) There’s a warren just to the north that a Malarite used to live in. You could move there.~
+@9004 = ~(Intelligence Persuade) There’s a warren just to the north that a Malarite used to live in. It'd be smarter to live there, away from pesky adventurers.~
+@9005 = ~ (Strength Intimidate) I’m going to kill you.~
 @9006 = ~Hm. I'll come back later.~
 @9007 = ~We live here. It’s a nice house.~
 @9008 = ~We just want to live in peace together. Happy, healthy, well fed.~

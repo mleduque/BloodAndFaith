@@ -1,11 +1,10 @@
 //spawns halfling cannibal
 
 IF
-Global("GcannibalSp","GLOBAL",0) Global("gBFq6","GLOBAL",1)
+	Global("GcannibalSp","MYAREA",0) Global("gBFq6","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("gg_can",[623.339],3)  
-SetGlobal("GcannibalSp","GLOBAL",1)
-
-Continue()
+	RESPONSE #100
+		CreateCreature("gg_can",[623.339],3)  
+		SetGlobal("GcannibalSp","MYAREA",1)
+		Continue()
 END

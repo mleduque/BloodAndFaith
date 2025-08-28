@@ -1,8 +1,9 @@
 IF
-	Global("GmalariteSp","GLOBAL",0) Global("gBFq2","GLOBAL",1) 
-	THEN
+	Global("GmalariteSp","MYAREA",0)
+	Global("gBFq2","GLOBAL",1) 
+THEN
 	RESPONSE #100
-	CreateCreature("gg_malar",[1968.257],3)  
-	SetGlobal("GmalariteSp","GLOBAL",1)
-	Continue()
+		CreateCreature("gg_malar",[1968.257],3)  
+		SetGlobal("GmalariteSp","MYAREA",1)
+		Continue()
 END

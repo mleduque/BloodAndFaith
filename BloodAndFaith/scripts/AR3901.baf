@@ -1,11 +1,10 @@
 //spawns necro
 
 IF
-Global("GnecroSP","GLOBAL",0) Global("gBFq8","GLOBAL",1) 
+	Global("GnecroSP","MYAREA",0) Global("gBFq8","GLOBAL",1) 
 THEN
-RESPONSE #100
-CreateCreature("g_necro",[1490.1360],3)  
-SetGlobal("GnecroSP","GLOBAL",1)
-
-Continue()
+	RESPONSE #100
+		CreateCreature("g_necro",[1490.1360],3)  
+		SetGlobal("GnecroSP","MYAREA",1)
+		Continue()
 END

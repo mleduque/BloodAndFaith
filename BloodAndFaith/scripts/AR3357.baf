@@ -1,10 +1,10 @@
 //spawns the widow of the ghost
 
 IF
-Global("GwifeSp","GLOBAL",0) Global("gBFq1","GLOBAL",1) 
+	Global("GwifeSp","MYAREA",0) Global("gBFq1","GLOBAL",1) 
 THEN
-RESPONSE #100
-CreateCreature("g_bfwi",[350.390],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GwifeSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("g_bfwi",[350.390],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GwifeSp","MYAREA",1)
+		Continue()
 END

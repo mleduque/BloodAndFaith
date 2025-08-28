@@ -1,0 +1,63 @@
+IF
+    StateCheck(Myself,STATE_PANIC)
+THEN
+    RESPONSE #100
+        RandomWalkContinuous()
+END
+
+////////////////////////////
+// HEALS
+///////////////////////////
+
+IF
+    Global ("g_mFirstHeal", "GLOBAL", 0)
+    HPPercentLT("g_mordy",60)
+THEN
+    RESPONSE #100
+        ForceSpell("g_mordy",CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+        SetGlobal ("g_mFirstHeal", "GLOBAL", 1)
+
+END
+
+IF
+    Global ("g_sFirstHeal", "GLOBAL", 0)
+    HPPercentLT(Myself,40)
+THEN
+    RESPONSE #100
+        SetGlobal ("g_sFirstHeal", "GLOBAL", 1)
+        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+
+END
+
+IF
+    Global ("g_mSecHeal", "GLOBAL", 0)
+    HPPercentLT("g_mordy",60)
+THEN
+    RESPONSE #100
+        ForceSpell("g_mordy",CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+	SetGlobal ("g_mSecHeal", "GLOBAL", 1)
+
+END
+
+IF
+        Global ("g_sSecHeal", "GLOBAL", 0)
+	HPPercentLT(Myself,40)
+THEN
+    RESPONSE #100
+        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+	SetGlobal ("g_sSecHeal", "GLOBAL", 1)
+END
+
+////////////////////////////
+// HURTS
+///////////////////////////
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+

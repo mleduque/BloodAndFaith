@@ -1,19 +1,13 @@
 //spawns the gravekeeper in Nashkel temple
 
 IF
-Global("GgravekSp","GLOBAL",0) Global("gBFq3","GLOBAL",1) 
+	Global("GgravekSp","MYAREA",0)
+	OR(2)
+		Global("gBFq3","GLOBAL",1) 
+		Global("gBFq3","GLOBAL",2) 
 THEN
-RESPONSE #100
-CreateCreature("g_bfgra",[317.380],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GgravekSp","GLOBAL",1)
-Continue()
-END
-
-IF
-Global("GgravekSp","GLOBAL",0) Global("gBFq3","GLOBAL",2) 
-THEN
-RESPONSE #100
-CreateCreature("g_bfgra",[317.380],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GgravekSp","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("g_bfgra",[317.380],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GgravekSp","MYAREA",1)
+		Continue()
 END

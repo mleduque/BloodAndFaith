@@ -1,11 +1,24 @@
 //spawns mordy
 
 IF
-Global("GmordySp","GLOBAL",0) Global("gBFq15","GLOBAL",1) 
+	RandomNumGT(100, 95)
+	Global("GmordySp","GLOBAL",0) 
+	Global("gBFq15","GLOBAL",1) 
 THEN
-RESPONSE #100
-CreateCreature("g_mordy",[2069.420],3)  
-SetGlobal("GmordySp","GLOBAL",1)
+	RESPONSE #100
+		CreateCreature("g_mordyj",[2069.420],3)
+		CreateCreature("g_bfcle",[2069.500],3)  
+		SetGlobal("GmordySp","GLOBAL",1)
+		Continue()
+END
 
-Continue()
+IF
+	Global("GmordySp","GLOBAL",0) 
+	Global("gBFq15","GLOBAL",1) 
+THEN
+	RESPONSE #100
+		CreateCreature("g_mordy",[2069.420],3)
+		CreateCreature("g_bfcle",[2069.500],3)  
+		SetGlobal("GmordySp","GLOBAL",1)
+		Continue()
 END

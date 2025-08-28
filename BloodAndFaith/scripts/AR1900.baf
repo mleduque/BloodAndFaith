@@ -1,11 +1,11 @@
 //spawns ex-thief
 
 IF
-Global("GexthiefSp","GLOBAL",0) Global("gBFq7","GLOBAL",1)
+	Global("GexthiefSp","MYAREA",0)
+	Global("gBFq7","GLOBAL",1)
 THEN
-RESPONSE #100
-CreateCreature("g_thief",[4600.3500],3)  
-SetGlobal("GexthiefSp","GLOBAL",1)
-
-Continue()
+	RESPONSE #100
+	CreateCreature("g_thief",[4600.3500],3)  
+	SetGlobal("GexthiefSp","MYAREA",1)
+	Continue()
 END

@@ -3,7 +3,7 @@ BEGIN d_gBFmor //Blood or Faith, Mordiyin Dialogue
 IF ~True()~ THEN BEGIN 0
 	SAY @12500 /* Well, if it isn’t Eloran’s newest pet. Was she too much of a coward to face me herself? It’s a shame, <CHARNAME>. You have no idea who she was - who she *really* is, do you? And yet, here you are, putting your life on the line for renegade Zhent trash. I wonder… if you manage to escape, will she even be there when you get back? Or did she throw you here to buy time for her own escape? I suppose you’ll never know. You’re going to die here, <CHARNAME>! */
 IF ~~ THEN DO ~
-	ActionOverride("g_mordy",Enemy()) ~ EXIT
+	ActionOverride("g_mordy",Enemy()) ActionOverride("g_bfcle",Enemy())~ EXIT
 END
 
 

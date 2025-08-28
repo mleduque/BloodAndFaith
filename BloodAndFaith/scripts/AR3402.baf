@@ -1,20 +1,20 @@
 //spawns eloran 
 
 IF
-	Global("GeloranSp","GLOBAL",0)
-	THEN
+	Global("GeloranSp","MYAREA",0)
+THEN
 	RESPONSE #100
-	CreateCreature("g_eloran",[300.550],3)  
-	SetGlobal("GeloranSp","GLOBAL",1)
-	Continue()
+		CreateCreature("g_eloran",[300.550],3)  
+		SetGlobal("GeloranSp","MYAREA",1)
+		Continue()
 END
 
 IF
-	Global("GjjSp","GLOBAL",0) Dead("g_necro")
-	THEN
+	Global("GjjSp","MYAREA",0) Dead("g_necro")
+THEN
 	RESPONSE #100
-	CreateCreature("g_bfovl",[405.570],3)  
-	CreateCreature("g_bfre",[425.600],3)  
-	SetGlobal("GjjSp","GLOBAL",1)
-	Continue()
+		CreateCreature("g_bfovl",[405.570],3)  
+		CreateCreature("g_bfre",[425.600],3)  
+		SetGlobal("GjjSp","MYAREA",1)
+		Continue()
 END
