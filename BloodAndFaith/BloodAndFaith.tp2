@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/BloodAndFaith/backup~
 AUTHOR ~Glittergear~
-VERSION ~1.0~
+VERSION ~1.3~
 
 
 ALWAYS
@@ -68,12 +68,16 @@ LANGUAGE ~English~
 
 LANGUAGE ~Simplified Chinese(by Lzw104522773)~
          ~schinese~   
+         ~BloodAndFaith/Languages/english/BloodAndFaith.tra~
          ~BloodAndFaith/Languages/schinese/BloodAndFaith.tra~ //you'd put the mod title in here.
+         ~BloodAndFaith/Languages/english/JournalEntries.tra~
          ~BloodAndFaith/Languages/schinese/JournalEntries.tra~
 
 LANGUAGE ~Russian (by CblblP & Arcanecoast.ru)~
          ~russian~
+         ~BloodAndFaith/Languages/english/BloodAndFaith.tra~
          ~BloodAndFaith/Languages/russian/BloodAndFaith.tra~ //you'd put the mod title in here.
+         ~BloodAndFaith/Languages/english/JournalEntries.tra~
          ~BloodAndFaith/Languages/russian/JournalEntries.tra~
 
 
