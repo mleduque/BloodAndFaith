@@ -28,12 +28,12 @@ IF ~~ THEN BEGIN 4
 END
 
 IF ~!Dead("g_rk") Global("gBFq4_ar3325","MYAREA",0)~ THEN BEGIN 5
-	SAY ~At least they’re gone now. Thank you.~
+	SAY @8506 /* ~At least they’re gone now. Thank you.~ */
 	IF ~~ THEN EXIT
 END
 
 IF ~Dead("g_rk") Global("gBFq4_ar3325","MYAREA",0)~ THEN BEGIN 6
-	SAY ~Adventurers! Completely filthy. Now, get out, I have a lot of cleaning to get done.~
+	SAY @8507 /* ~Adventurers! Completely filthy. Now, get out, I have a lot of cleaning to get done.~ */
 	IF ~~ THEN EXIT
 END
 

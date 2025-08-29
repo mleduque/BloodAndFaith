@@ -12,6 +12,8 @@ THEN
 		Continue()
 END
 
+// Reactivate original game owner (talk) when Blood and Faith quest is done.
+
 IF
 	Delay(1)
 	!Global("GhoManSp","MYAREA",0)
@@ -22,8 +24,21 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("gBFq1_ar3311","MYAREA",0)
-		 ActionOverride("FTOBE3",SetNumTimesTalkedTo(0))
 		//Activate("FTOBE3") // Female Townsfolk Beregost_House12_L1_BCS
+		Continue()
+END
+
+// In case player never talked to original game owner before Blood and Faith quest.
+
+IF
+	Delay(2)
+	!Global("GhoManSp","MYAREA",0)
+	Global("gBFq1_ar3311","MYAREA",0)
+	!Global("gBFq1_FTOBE3","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("gBFq4_ar3325","MYAREA",0)
+		ActionOverride("FTOBE3",SetNumTimesTalkedTo(0))
 		Continue()
 END
 

@@ -11,6 +11,8 @@ THEN
 		Continue()
 END
 
+// Reactivate original game owner (talk) when Blood and Faith quest is done.
+
 IF
 	Delay(1)
 	!Global("GwomanSp","MYAREA",0)
@@ -25,11 +27,13 @@ THEN
 		Continue()
 END
 
+// In case player never talked to original game owner before Blood and Faith quest.
+
 IF
 	Delay(2)
 	!Global("GwomanSp","MYAREA",0)
 	Global("gBFq4_ar3325","MYAREA",0)
-	Global("gBFq4_MTBE8","MYAREA",1)
+	!Global("gBFq4_MTBE8","MYAREA",1)
 THEN
 	RESPONSE #100
 		SetGlobal("gBFq4_ar3325","MYAREA",0)

@@ -54,6 +54,6 @@ IF ~Global("gBFq1_That_correct","MYAREA",1) Global("gBFq1_ar3311","MYAREA",0)~ T
 END	
 
 IF ~!Global("gBFq1_That_correct","MYAREA",1) Global("gBFq1_ar3311","MYAREA",0)~ THEN BEGIN 7
-	SAY ~Thank you for your help.~
+	SAY @7512 /* ~Thank you for your help.~ */
 	IF ~~ THEN EXIT
 END	

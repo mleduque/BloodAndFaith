@@ -1,3 +1,7 @@
+ADD_TRANS_ACTION  FTOBE3 BEGIN 0 END BEGIN END ~SetGlobal("gBFq1_FTOBE3","MYAREA",1)~ // To know if player already talked to original game owner before Blood and Faith quest.
+
+// Append original game owner dialog according to Blood and Faith talk.
+
 APPEND FTOBE3
 
 	IF WEIGHT #-1 ~!Global("gBFq1_ar3311","MYAREA",0) !Global("GhoManSp","MYAREA",0)~ THEN BEGIN d_gFTOBE3
@@ -11,7 +15,9 @@ APPEND FTOBE3
 
 END
 
-ADD_TRANS_ACTION  MTBE8 BEGIN 0 END BEGIN 0 END ~SetGlobal("gBFq4_MTBE8","MYAREA",1)~
+ADD_TRANS_ACTION  MTBE8 BEGIN 0 END BEGIN END ~SetGlobal("gBFq4_MTBE8","MYAREA",1)~ // To know if player already talked to original game owner before Blood and Faith quest.
+
+// Append original game owner dialog according to Blood and Faith talk.
 
 APPEND MTBE8
 
