@@ -9,9 +9,9 @@
 @9    = ~Ovlin~
 @10   = ~Officer Reatin~
 @11   = ~Widow~
-@12   = ~Friendly Zom~
+@12   = ~Friendly Zombie~
 @13   = ~Evil Zhent~
-@14   = ~Friendly Dop~
+@14   = ~Friendly Doppelganger~
 @15   = ~The Loviatan~
 @16   = ~Mordiyin~
 @17   = ~Necromancer~
@@ -47,41 +47,61 @@ Requires:
  Cannot be used by Good-aligned character
 
 Weight: 4~
+
 @34   = ~Beast Claw of Malar~
 @35   = ~Said to be a claw taken from one of Malar's favored beasts, this ring reeks of blood and pulsates slightly to the touch. The wearer is imbued with the Beastlord's stealth and ferocity, but at the cost of <PRO_HISHER> judgment and social graces.
 
+STATISTICS:
 
 Equipped abilities:
-– Armor Class: +1, an extra +4 vs. missile attacks
-– +10% Hide in Shadows
-– +10% Move Silently
+- Armor Class: +1, an extra +4 vs. missile attacks
+- +10% Hide in Shadows
+- +10% Move Silently
 - +2 Speed Modifier
-– -2 Wisdom
+- -2 Wisdom
 - -3 Charisma
-– May only be removed with a Remove Curse spell~
+- May only be removed with a Remove Curse spell
+
+Weight: 1~
+
 @36   = ~Spinal Staff~
 @37   = ~The remains of some necromancer's victim, a trace of the agony felt by the spine's original owner can still be felt. It renders the bearer repellent in the eyes of others, but the magical power it grants is difficult to argue with. Sometimes it shifts in the hand as though still alive.
 
+STATISTICS:
 
 Equipped abilities:
-– THAC0 +1
-– Double wizard spells
+- THAC0 +1
+- Double wizard spells
 - -3 Charisma
 - -2 Constitution
-- Can't be used by Good~
+- Can't be used by Good
+
+Weight: 4~
+
 @38   = ~Eloran's Amulet~
 @39   = ~Emblazoned with the Morninglord's symbol, this gold amulet grants its wearer greater attention in the eyes of <PRO_HISHER> god. It cannot be used by those who serve evil.
 
+STATISTICS:
+
 Equipped abilities:
-– Double Divine Spellslots
+- Double Divine Spellslots
 - Only usable by clerics
-- Can't be used by Evil~
+- Can't be used by Evil
+
+Weight: 1~
+
 @40   = ~Cloak of Ibrandul~
 @41   = ~Once worn by a follower of Ibrandul, the god of caverns, the cloak has taken on something of his darkness. Featherlight, it twists like a living shadow, and confers greater concealment at night.
+
+STATISTICS:
 
 Equipped abilities:
 - AC +1
 - Infravision
 - Move silently +10 (active at night)
-- Hide in Shadows +10 (active at night)~
+- Hide in Shadows +10 (active at night)
+
+Weight: 3~
+
+
 @42   = ~This mod need BGEE, BGT or EET~
