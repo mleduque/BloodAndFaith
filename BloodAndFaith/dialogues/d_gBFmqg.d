@@ -1100,7 +1100,7 @@ IF  ~Global("gBFq13","GLOBAL",1) !Dead("g_lovi")~ THEN BEGIN loviDoIt
  SAY @13249 /* Deliver that ring. */ IF ~~ THEN EXIT
 END
 
-//has delivered the potions
+//has delivered the ring // (potions)
 
 IF  ~Global("gBFq13","GLOBAL",2) !Dead("g_lovi")~ THEN BEGIN loviDone
 	SAY @13250 /* Ah, you're back. Tell me, <CHARNAME>, in this case, why did you do what I asked? */

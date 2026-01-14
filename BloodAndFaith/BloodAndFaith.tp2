@@ -9,17 +9,18 @@ ALWAYS
 	
 		INCLUDE ~BloodAndFaith/lib/g3_bgee_cpmvars.tpa~
 		PRINT @1 /* Game is bgee */
-		
+
 	END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
 	
 		INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
 		PRINT @2 /* Game is EET */
-		
+
+
 	END ELSE ACTION_IF GAME_IS ~bgt~ BEGIN
-	
+
 		INCLUDE ~BloodAndFaith/lib/g3_bgt_cpmvars.tpa~
 		PRINT @3 /* Game is BGT */
-		
+
 	END
 
     //Copies tra files into the autotra-folder (to leave the originals untouched)
@@ -35,7 +36,7 @@ ALWAYS
 // Convert tra files in UTF8 if EE and let them in ANSI if oBG
 
 	ACTION_IF GAME_IS ~bgee eet~ BEGIN
-//  ACTION_DEFINE_ARRAY BloodAndFaith_noconvert BEGIN BloodAndFaith END
+  ACTION_DEFINE_ARRAY BloodAndFaith_noconvert BEGIN install END
 
 		ACTION_DEFINE_ARRAY BloodAndFaith_reload BEGIN BloodAndFaith JournalEntries END
 
@@ -46,7 +47,7 @@ ALWAYS
 				tra_path = EVAL ~weidu_external/BloodAndFaith/Languages/autotra~
 				out_path = EVAL ~weidu_external/BloodAndFaith/Languages/autotra/UTF8~
 				iconv_path = ~BloodAndFaith/Languages/autotra/iconv~
-				// noconvert_array = BloodAndFaith_noconvert
+				 noconvert_array = BloodAndFaith_noconvert
 				reload_array = BloodAndFaith_reload
 			END
 
@@ -72,6 +73,7 @@ LANGUAGE ~Simplified Chinese(by Lzw104522773)~
          ~BloodAndFaith/Languages/schinese/BloodAndFaith.tra~ //you'd put the mod title in here.
          ~BloodAndFaith/Languages/english/JournalEntries.tra~
          ~BloodAndFaith/Languages/schinese/JournalEntries.tra~
+         ~BloodAndFaith/Languages/schinese/install.tra~
 
 LANGUAGE ~Russian (by CblblP & Arcanecoast.ru)~
          ~russian~
