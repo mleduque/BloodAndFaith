@@ -46,12 +46,13 @@ IF ~~ THEN BEGIN whatWant
 END
 
 IF ~~ THEN BEGIN stallTime
-	SAY @9009 /* You do that. We'll all still be here, considering we live here now. */ IF ~~ THEN DO ~
-SetGlobal("gBFq4","GLOBAL",2) ~ EXIT
+	SAY @9009 /* You do that. We'll all still be here, considering we live here now. */
+	IF ~~ THEN DO ~SetGlobal("gBFq4","GLOBAL",2) ~ EXIT
 END
 
 IF ~~ THEN BEGIN stallTimetwo
-	SAY @9010 /* You do that. We'll all still be here, considering we live here now.  */ IF ~~ THEN EXIT
+	SAY @9010 /* You do that. We'll all still be here, considering we live here now.  */
+	IF ~~ THEN EXIT
 END
 
 
@@ -59,63 +60,69 @@ END
 //3 stat checks: CHR, INT, STR YES
 IF ~~ THEN BEGIN chrYes
 	SAY @9011 /* Hm… A place of our own to move into? No one trying to chase us out all the time or squash us? Hmm… We will try it. */
-IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4)
-	 ActionOverride("g_rat1",EscapeArea())
-	 ActionOverride("g_rat2",EscapeArea())
-	 ActionOverride("g_rat3",EscapeArea())
-	 ActionOverride("g_rat5",EscapeArea())
-	 ActionOverride("g_rat6",EscapeArea())
-	 ActionOverride("g_rat7",EscapeArea())
-	 ActionOverride("g_rat4",EscapeArea())
-	 ActionOverride("g_rk",EscapeArea())~ EXIT
+	IF ~~ THEN DO ~SetGlobal("gBFq4","GLOBAL",4)
+					ActionOverride("g_rat1",EscapeArea())
+					ActionOverride("g_rat2",EscapeArea())
+					ActionOverride("g_rat3",EscapeArea())
+					ActionOverride("g_rat5",EscapeArea())
+					ActionOverride("g_rat6",EscapeArea())
+					ActionOverride("g_rat7",EscapeArea())
+					ActionOverride("g_rat4",EscapeArea())
+					ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 
 IF ~~ THEN BEGIN intYes
 	SAY @9011 /* Hm… A place of our own to move into? No one trying to chase us out all the time or squash us? Hmm… We will try it. */
-IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4)
-	 ActionOverride("g_rat1",EscapeArea())
-	 ActionOverride("g_rat2",EscapeArea())
-	 ActionOverride("g_rat3",EscapeArea())
-	 ActionOverride("g_rat5",EscapeArea())
-	 ActionOverride("g_rat6",EscapeArea())
-	 ActionOverride("g_rat7",EscapeArea())
-	 ActionOverride("g_rat4",EscapeArea())
-	 ActionOverride("g_rk",EscapeArea())~ EXIT
+	IF ~~ THEN DO ~SetGlobal("gBFq4","GLOBAL",4)
+					ActionOverride("g_rat1",EscapeArea())
+					ActionOverride("g_rat2",EscapeArea())
+					ActionOverride("g_rat3",EscapeArea())
+					ActionOverride("g_rat5",EscapeArea())
+					ActionOverride("g_rat6",EscapeArea())
+					ActionOverride("g_rat7",EscapeArea())
+					ActionOverride("g_rat4",EscapeArea())
+					ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 
 IF ~~ THEN BEGIN strYes
 	SAY @9012 /* Wait, wait, wait! You seem strong. We don't want to fight you. We'll leave. */
-IF ~~ THEN DO ~
-	 SetGlobal("gBFq4","GLOBAL",4)
-	 ActionOverride("g_rat1",EscapeArea())
-	 ActionOverride("g_rat2",EscapeArea())
-	 ActionOverride("g_rat3",EscapeArea())
-	 ActionOverride("g_rat5",EscapeArea())
-	 ActionOverride("g_rat6",EscapeArea())
-	 ActionOverride("g_rat7",EscapeArea())
-	 ActionOverride("g_rat4",EscapeArea())
-	 ActionOverride("g_rk",EscapeArea())~ EXIT
+	IF ~~ THEN DO ~SetGlobal("gBFq4","GLOBAL",4)
+					ActionOverride("g_rat1",EscapeArea())
+					ActionOverride("g_rat2",EscapeArea())
+					ActionOverride("g_rat3",EscapeArea())
+					ActionOverride("g_rat5",EscapeArea())
+					ActionOverride("g_rat6",EscapeArea())
+					ActionOverride("g_rat7",EscapeArea())
+					ActionOverride("g_rat4",EscapeArea())
+					ActionOverride("g_rk",EscapeArea())~ EXIT
 END
 
 //3 stat checks: CHR, INT, STR NO
 
 IF ~~ THEN BEGIN chrNo
-	SAY @9013 /* Away from civilization? No thanks. Not much to do out in the wilderness. Less free food, too. */ IF ~~ THEN EXIT
+	SAY @9013 /* Away from civilization? No thanks. Not much to do out in the wilderness. Less free food, too. */
+	IF ~~ THEN EXIT
 END
 
 
 IF ~~ THEN BEGIN intNo
-	SAY @9013 /* Away from civilization? No thanks. Not much to do out in the wilderness. Less free food, too. */ IF ~~ THEN EXIT
+	SAY @9013 /* Away from civilization? No thanks. Not much to do out in the wilderness. Less free food, too. */
+	IF ~~ THEN EXIT
 END
 
 
 IF ~~ THEN BEGIN strNo
-	SAY @9014 /* Pfah! You are outnumbered! My rats, attack! */ IF ~~ THEN DO ~
-	ActionOverride("g_rk",Enemy()) ActionOverride("g_rat1",Enemy()) ActionOverride("g_rat2",Enemy()) ActionOverride("g_rat3",Enemy()) ActionOverride("g_rat5",Enemy()) ActionOverride("g_rat6",Enemy()) ActionOverride("g_rat7",Enemy()) ActionOverride("g_rat4",Enemy()) ~ EXIT
+	SAY @9014 /* Pfah! You are outnumbered! My rats, attack! */
+	IF ~~ THEN DO ~ActionOverride("g_rk",Enemy())
+					ActionOverride("g_rat1",Enemy())
+					ActionOverride("g_rat2",Enemy())
+					ActionOverride("g_rat3",Enemy())
+					ActionOverride("g_rat5",Enemy())
+					ActionOverride("g_rat6",Enemy())
+					ActionOverride("g_rat7",Enemy())
+					ActionOverride("g_rat4",Enemy()) ~ EXIT
 END
 
 

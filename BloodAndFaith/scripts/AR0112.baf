@@ -1,7 +1,7 @@
 //spawns mordy
 
 IF
-	RandomNumGT(100, 95)
+	RandomNumGT(100,95)
 	Global("GmordySp","GLOBAL",0) 
 	Global("gBFq15","GLOBAL",1) 
 THEN

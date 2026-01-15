@@ -120,8 +120,18 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
 --------------
 
 1.3 Languages update and fixes
- - Chinese by Lzw104522773
+ - Synchronize 1.1 and 1.2
+ - Chinese by Lzw104522773, add install.tra for prompt
  - Russian by CblblP
+ - Typo by CblblP
+ - Metadata, Designated, Label
+ - WeiduModPackager
+ - Language fallback
+ - [Correct journal entries](https://www.gibberlings3.net/forums/topic/38708-mod-release-blood-and-faith-a-bg1-questline-mod/?do=findComment&comment=352081)
+ - [Beregost houses owners accounted for](https://www.gibberlings3.net/forums/topic/38708-mod-release-blood-and-faith-a-bg1-questline-mod/page/3/#comment-351652)
+ - GLOBAL to LOCALS/MYAREA when possible
+ - EscapeArea() / Kill(Myself) moved at the end of blocks
+ - G_warrens spiders changes to SPIDGI or SPIDGI01
 
 1.2 Voice acting and more!
  - Full voiceacting for Eloran!

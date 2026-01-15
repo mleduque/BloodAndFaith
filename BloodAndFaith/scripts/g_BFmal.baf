@@ -3,11 +3,11 @@
 //////////////////////
 IF
 	See(NearestEnemyOf(Myself))
-	Global ("g_bfmFB", "GLOBAL", 0)
+	Global ("g_bfmFB","LOCALS",0)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,CLERIC_FLAME_BLADE)
-		SetGlobal ("g_bfmFB", "GLOBAL", 1)
+		SetGlobal ("g_bfmFB","LOCALS",1)
 END
 
 //////////////////////
@@ -15,11 +15,11 @@ END
 //////////////////////
 IF
 	See(NearestEnemyOf(Myself))
-	Global ("g_bfmBS", "GLOBAL", 0)
+	Global ("g_bfmBS","LOCALS",0)
 THEN
 	RESPONSE #100
 		ForceSpell(Myself,CLERIC_BARKSKIN)
-		SetGlobal ("g_bfmBS", "GLOBAL", 1)
+		SetGlobal ("g_bfmBS","LOCALS",1)
 END
 
 //////////////////////
@@ -27,9 +27,9 @@ END
 //////////////////////
 IF
 	See(NearestEnemyOf(Myself))
-	Global ("g_bfmSI", "GLOBAL", 0)
+	Global ("g_bfmSI","LOCALS",0)
 THEN
 	RESPONSE #100
 		ForceSpell(NearestEnemyOf(Myself),CLERIC_SUMMON_INSECTS)
-		SetGlobal ("g_bfmSI", "GLOBAL", 1)
+		SetGlobal ("g_bfmSI","LOCALS",1)
 END

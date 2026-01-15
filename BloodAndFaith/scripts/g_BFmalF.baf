@@ -1,11 +1,9 @@
 IF
-	Global("g_bfMf","GLOBAL",0) 
-    See([PC])
+	Global("g_bfMf","LOCALS",0) 
+	See([PC])
 THEN
-    RESPONSE #100
-        StartDialogueNoSet(Player1)
-	SetGlobal("g_bfMf","GLOBAL",1) 
-	EscapeArea()
-Continue()
+	RESPONSE #100
+		SetGlobal("g_bfMf","LOCALS",1) 
+		StartDialogueNoSet(Player1)
 END
 

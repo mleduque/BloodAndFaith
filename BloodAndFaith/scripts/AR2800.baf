@@ -1,7 +1,8 @@
 //spawns Malarite
 
 IF
-	Global("GbmalarSp","MYAREA",0) Global("gBFq2","GLOBAL",1) 
+	Global("GbmalarSp","MYAREA",0)
+	Global("gBFq2","GLOBAL",1) 
 THEN
 		RESPONSE #100
 		CreateCreature("gg_malaF",[2536.3256],3)  
@@ -12,7 +13,8 @@ END
 //spawns zhent1
 
 IF
-	Global("GbzhentSp","MYAREA",0) Global("gBFq5","GLOBAL",1) 
+	Global("GbzhentSp","MYAREA",0)
+	Global("gBFq5","GLOBAL",1) 
 THEN
 	RESPONSE #100
 		CreateCreature("g_Zhent1",[1285.780],3)  

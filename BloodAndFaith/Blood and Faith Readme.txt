@@ -96,6 +96,21 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
 /////////////////////
 //CHANGELOG
 /////////////////////
+
+1.3 Languages update and fixes
+ - Synchronize 1.1 and 1.2
+ - Chinese by Lzw104522773, add install.tra for prompt
+ - Russian by CblblP
+ - Typo by CblblP
+ - Metadata, Designated, Label
+ - WeiduModPackager
+ - Language fallback
+ - Correct journal entries
+ - Beregost houses owners accounted for
+ - GLOBAL to LOCALS/MYAREA when possible
+ - EscapeArea() / Kill(Myself) moved at the end of blocks
+ - G_warrens spiders changes to SPIDGI or SPIDGI01
+
 1.2 Voice acting and more!
 	Full voiceacting for Eloran!
 	Voiceacting and soundset for the final boss!
@@ -109,6 +124,7 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
 	Nerfed the necromancer boss a bit
 	
 1.1 Lots of Bugfixing, Tra-ification, and polish
+
 1.0 Full Release -- Bugfixes and Polish
 	REQUIRES A NEW SAVE
 	Eloran will give you the questline without you needing to kill Bassilus first
@@ -123,6 +139,7 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
 	The Zhents initiate dialogue and combat automatically when they see you
 	Fixed some finale dialogue
 	Tweaked enemy health
+
 0.9.3 Lots of changes: REQUIRES A SAVE THAT HASN'T BEEN TO THE COASTWAY (NORTH OF BEREGOST) YET
 	Eloran gives slightly better directions
 	Eloran has a portrait
@@ -150,6 +167,7 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
 	Added some banters spread out throughout her questline--3 with Imoen, 3 with Xzar, 2 with Kivan. See Walkthrough for when they appear.
 
 0.9.1 Removed an unneeded folder
+
 0.9 Initial beta release
 
 

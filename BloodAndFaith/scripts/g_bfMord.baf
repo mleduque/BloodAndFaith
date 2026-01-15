@@ -1,11 +1,11 @@
 IF
-    Global("DoOnce","GLOBAL",0) 
+    Global("DoOnce","LOCALS",0) 
     See([PC])
 THEN
     RESPONSE #100
     PlaySong(0)
     StartDialogueNoSet(Player1)
-    SetGlobal("DoOnce","GLOBAL",1) 
+    SetGlobal("DoOnce","LOCALS",1) 
     Continue()
 END
 
@@ -18,7 +18,7 @@ THEN
 END
 
 IF
-    Global ("g_BFmus", "GLOBAL", 0)
+    Global ("g_BFmus","LOCALS",0)
     See(NearestEnemyOf(Myself))
     //!StateCheck(Myself,STATE_MIRRORIMAGE)
 THEN
@@ -26,7 +26,7 @@ THEN
     PlaySong(0)
     PlaySound("g_bff")
     ForceSpell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
-    SetGlobal ("g_BFmus", "GLOBAL", 1)
+    SetGlobal ("g_BFmus","LOCALS",1)
 END
 
 IF
