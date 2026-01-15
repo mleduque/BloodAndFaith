@@ -10,15 +10,16 @@ IF ~Global("gBFq1","GLOBAL",1)~ THEN BEGIN 0
 END
 
 IF ~~ THEN BEGIN 1
-	SAY @11505 /* Coins... not my coins... Must have coins... */ IF ~~ THEN EXIT
+	SAY @11505 /* Coins... not my coins... Must have coins... */
+	IF ~~ THEN DO ~SetGlobal("Talked2_gBFq1","GLOBAL",1)~ EXIT
 END	
 
 IF ~~ THEN BEGIN 2
-	SAY @11506 /* Coins... my coins... */ IF ~~ THEN EXIT
+	SAY @11506 /* Coins... my coins... */
+	IF ~~ THEN DO ~SetGlobal("Talked2_gBFq1","GLOBAL",1)~ EXIT
 END	
 
 IF ~~ THEN BEGIN 3
-	SAY @11507 /* Coins... my coins! Thank you... */ IF ~~ THEN EXIT
-IF ~~ THEN DO ~
-SetGlobal("gBFq1","GLOBAL",2) TakePartyItem("gBFcc") DestroySelf()~ EXIT
+	SAY @11507 /* Coins... my coins! Thank you... */
+	IF ~~ THEN DO ~SetGlobal("gBFq1","GLOBAL",2) TakePartyItem("gBFcc") DestroySelf()~ EXIT
 END	

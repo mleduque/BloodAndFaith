@@ -110,6 +110,7 @@ If you find anything else, ping me on Discord or post it to the G3 forums.
  - GLOBAL to LOCALS/MYAREA when possible
  - EscapeArea() / Kill(Myself) moved at the end of blocks
  - G_warrens spiders changes to SPIDGI or SPIDGI01
+ - Items corrections
 
 1.2 Voice acting and more!
 	Full voiceacting for Eloran!

@@ -6,11 +6,10 @@ APPEND FTOBE3
 
 	IF WEIGHT #-1 ~!Global("gBFq1_ar3311","MYAREA",0) !Global("GhoManSp","MYAREA",0)~ THEN BEGIN d_gFTOBE3
 		SAY @7500 /* Oh, you’re the one the Lathanderite’s sent? The ghost is upstairs. Please do something about it! He keeps going on about coins. */
-			+ ~!Global("Talked1_gBFq1","MYAREA",1)~ + @7501 /* What can you tell me about this ghost? */ DO ~SetGlobal("Talked1_gBFq1","MYAREA",1)~ EXTERN d_gBF1ho 1
-			+ ~!Global("Talked2_gBFq1","MYAREA",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","MYAREA",1)~ EXTERN d_gBF1ho 2
-			+ + @7503 /* I have no further questions. */ EXTERN d_gBF1ho 3
+			++ @7501 /* What can you tell me about this ghost? */ DO ~SetGlobal("Talked1_gBFq1","MYAREA",1)~ EXTERN d_gBF1ho 1
+			+ ~!Global("Talked2_gBFq1","GLOBAL",0)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","GLOBAL",2)~ EXTERN d_gBF1ho 2
+			++ @7503 /* I have no further questions. */ EXIT
 			+ ~Global("gBFq1","GLOBAL",2) !Global("gBFq1_ar3311","MYAREA",0) !Global("gBFq1_ar3311","MYAREA",2)~ + @7508 /* The ghost is gone now. He just wanted his coin collection. */  DO ~SetGlobal("gBFq1_ar3311","MYAREA",2)~ EXTERN d_gBF1ho 5
-			+ ~Global("gBFq1","GLOBAL",2) !Global("gBFq1_ar3311","MYAREA",0) !Global("gBFq1_ar3311","MYAREA",2)~ + @7509 /* That's correct. */ DO ~SetGlobal("gBFq1_ar3311","MYAREA",2) SetGlobal("gBFq1_That_correct","MYAREA",1)~ EXTERN d_gBF1ho 6
 	END
 
 END

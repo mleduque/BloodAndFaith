@@ -2,10 +2,10 @@ BEGIN d_gBF1ho //homeowner's dialogue
 
 
 //hasn't talked to the ghost yet
-IF ~Global("gBFq1","GLOBAL",1) OR(2) !Global("Talked1_gBFq1","MYAREA",1) !Global("Talked2_gBFq1","MYAREA",1)~ THEN BEGIN 0
+IF ~Global("gBFq1","GLOBAL",1) !Global("Talked1_gBFq1","MYAREA",1)~ THEN BEGIN 0
 	SAY @7500 /* Oh, you’re the one the Lathanderite’s sent? The ghost is upstairs. Please do something about it! He keeps going on about coins. */
 		+ ~!Global("Talked1_gBFq1","MYAREA",1)~ + @7501 /* What can you tell me about this ghost? */ DO ~SetGlobal("Talked1_gBFq1","MYAREA",1)~ GOTO 1
-		+ ~!Global("Talked2_gBFq1","MYAREA",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","MYAREA",1)~ GOTO 2
+		+ ~Global("Talked2_gBFq1","GLOBAL",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","GLOBAL",2)~ GOTO 2
 		++ @7503 /* I have no further questions. */ GOTO 3
 END
 
@@ -21,18 +21,22 @@ END
 
 IF ~~ THEN BEGIN 1
 	SAY @7504 /* I don’t know much about him! I just moved here from Daggerford! He died, obviously, and so the wife sold the house. I think she’s staying at the Red Sheaf until she gets her affairs in order to move to Baldur’s Gate. */
-		+ ~!Global("Talked2_gBFq1","MYAREA",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","MYAREA",1)~ GOTO 2
-		++ @7503 /* I have no further questions. */ GOTO 3
+		+ ~Global("Talked2_gBFq1","GLOBAL",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","GLOBAL",2)~ GOTO 2
+		++ @7503 /* I have no further questions. */ EXIT
 END
 
 IF ~~ THEN BEGIN 2
 	SAY @7505 /* Yes, he does that. But I already bought the house from his widow; I’m not giving him money too!  */
-		+ ~!Global("Talked1_gBFq1","MYAREA",1)~ + @7501 /* What can you tell me about this ghost? */ DO ~SetGlobal("Talked1_gBFq1","MYAREA",1) SetGlobal("Talked2_gBFq1","MYAREA",1)~ GOTO 1
-		++ @7503 /* I have no further questions. */ GOTO 3
+		++ @7501 /* What can you tell me about this ghost? */ DO ~SetGlobal("Talked1_gBFq1","MYAREA",1)~ GOTO 1
+		++ @7503 /* I have no further questions. */ DO ~SetGlobal("Talked2_gBFq1","GLOBAL",1)~ EXIT
 END
 
-IF ~Global("gBFq1","GLOBAL",1) Global("Talked1_gBFq1","MYAREA",1) Global("Talked2_gBFq1","MYAREA",1)~ THEN BEGIN 3
-	SAY @7506 /* Hopefully you have a few ideas about what to do here. I don’t want to live in a haunted house, and I don’t think I can sell the place now. */ IF ~~ THEN EXIT
+IF ~Global("gBFq1","GLOBAL",1) Global("Talked1_gBFq1","MYAREA",1)~ THEN BEGIN 3
+	SAY @7506 /* Hopefully you have a few ideas about what to do here. I don’t want to live in a haunted house, and I don’t think I can sell the place now. */
+	IF ~~ THEN EXIT
+	+ ~Global("Talked2_gBFq1","GLOBAL",1)~ + @7502 /* He keeps going on about coins? */ DO ~SetGlobal("Talked2_gBFq1","GLOBAL",2)~ GOTO 2
+	IF ~Global("Talked2_gBFq1","GLOBAL",2)~ THEN DO ~SetGlobal("Talked2_gBFq1","GLOBAL",1)~ EXIT
+		++ @7503 /* I have no further questions. */ EXIT
 END
 
 //sent off the ghost
