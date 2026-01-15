@@ -1,7 +1,8 @@
 //spawns doppelganger
 
 IF
-	Global("GdopSp","MYAREA",0) Global("gBFq14","GLOBAL",1)
+	Global("GdopSp","MYAREA",0)
+	Global("gBFq14","GLOBAL",1)
 THEN
 	RESPONSE #100
 		CreateCreature("g_dop",[921.290],3)  

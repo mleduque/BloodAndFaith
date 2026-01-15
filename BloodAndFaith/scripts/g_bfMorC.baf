@@ -1,8 +1,8 @@
 IF
-    StateCheck(Myself,STATE_PANIC)
+	StateCheck(Myself,STATE_PANIC)
 THEN
-    RESPONSE #100
-        RandomWalkContinuous()
+	RESPONSE #100
+		RandomWalkContinuous()
 END
 
 ////////////////////////////
@@ -10,42 +10,40 @@ END
 ///////////////////////////
 
 IF
-    Global ("g_mFirstHeal", "GLOBAL", 0)
-    HPPercentLT("g_mordy",60)
+	Global ("g_mFirstHeal","LOCALS",0)
+	HPPercentLT("g_mordy",60)
 THEN
-    RESPONSE #100
-        ForceSpell("g_mordy",CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
-        SetGlobal ("g_mFirstHeal", "GLOBAL", 1)
+	RESPONSE #100
+		ForceSpell("g_mordy",CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+		SetGlobal ("g_mFirstHeal","LOCALS",1)
 
 END
 
 IF
-    Global ("g_sFirstHeal", "GLOBAL", 0)
-    HPPercentLT(Myself,40)
-THEN
-    RESPONSE #100
-        SetGlobal ("g_sFirstHeal", "GLOBAL", 1)
-        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
-
-END
-
-IF
-    Global ("g_mSecHeal", "GLOBAL", 0)
-    HPPercentLT("g_mordy",60)
-THEN
-    RESPONSE #100
-        ForceSpell("g_mordy",CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
-	SetGlobal ("g_mSecHeal", "GLOBAL", 1)
-
-END
-
-IF
-        Global ("g_sSecHeal", "GLOBAL", 0)
+	Global ("g_sFirstHeal","LOCALS",0)
 	HPPercentLT(Myself,40)
 THEN
-    RESPONSE #100
-        ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
-	SetGlobal ("g_sSecHeal", "GLOBAL", 1)
+	RESPONSE #100
+		SetGlobal ("g_sFirstHeal","LOCALS",1)
+		ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+END
+
+IF
+	Global ("g_mSecHeal","LOCALS",0)
+	HPPercentLT("g_mordy",60)
+THEN
+	RESPONSE #100
+		ForceSpell("g_mordy",CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+		SetGlobal ("g_mSecHeal","LOCALS",1)
+END
+
+IF
+	Global ("g_sSecHeal","LOCALS",0)
+	HPPercentLT(Myself,40)
+THEN
+	RESPONSE #100
+		ForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+		SetGlobal ("g_sSecHeal","LOCALS",1)
 END
 
 ////////////////////////////
@@ -53,11 +51,11 @@ END
 ///////////////////////////
 
 IF
-    See(NearestEnemyOf(Myself))
+	See(NearestEnemyOf(Myself))
 THEN
-    RESPONSE #100
-        EquipMostDamagingMelee()
-        AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),30)
 END
 
 

@@ -332,6 +332,7 @@ COPY ~BloodAndFaith/creatures/gg_malar.cre~ ~override/gg_malar.cre~ //
 COPY ~BloodAndFaith/creatures/gg_malaF.cre~ ~override/gg_malaF.cre~ //
 	SAY NAME1 @23 /* Malarite */
 	SAY NAME2 @23 /* Malarite */
+	WRITE_ASCII DIALOG ~d_gBFMal~ (8)
 
 COPY ~BloodAndFaith/creatures/gg_can.cre~ ~override/gg_can.cre~ //
 	SAY NAME1 @24 /* Lenovela the Cannibal */
@@ -424,18 +425,97 @@ Equipped abilities:
 - Hide in Shadows +10 (active at night)~ */
 
 
+	ACTION_IF GAME_IS ~bgee~ BEGIN
+OUTER_SPRINT "spider" "SPIDGI"
+	END ELSE BEGIN
+OUTER_SPRINT "spider" "SPIDGI01"
+	END
+
 COPY ~BloodAndFaith/Areas/g_warren.are~ ~override~
 	WRITE_ASCIIE 0x08 ~%WerewolfCaverns%~ (8)
-  LPF  ALTER_AREA_REGION
-    STR_VAR
-    region_name              = Door2001 
-    destination_area =  EVAL ~%CoastWay%~
-  END
-
-// Missing BPSPID02.CRE from EE in g_warren.are
-		ACTION_IF GAME_IS ~bgt~ AND NOT FILE_EXISTS_IN_GAME ~BPSPID02.CRE~ BEGIN
-COPY_EXISTING ~SPIDGI01.CRE~ ~override/BPSPID02.CRE~
+	LPF ALTER_AREA_REGION
+		STR_VAR
+		region_name              = Door2001 
+		destination_area = EVAL ~%CoastWay%~
+	END
+// Delete spawn points
+		FOR ( i = SHORT_AT 0x60 ; i ; --i ) BEGIN
+	LPF fj_are_structure
+		INT_VAR
+		fj_delete_mode = i - 1
+		STR_VAR
+		fj_structure_type = Spawn
+	END
 		END
+// Redo spawn points
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x = 344
+		fj_loc_y = 1115
+		fj_spawn_num = 1
+		fj_difficulty = 200
+		fj_delay = 6
+		fj_method = BIT0
+		fj_duration = 1000
+		fj_wander_dist_spawn = 1000
+		fj_mvmt_dist_spawn = 1000
+		fj_max_num = 2
+		STR_VAR
+		fj_structure_type = Spawn
+		fj_name           = g_Spawn_Point_1
+		fj_cre_resref0    = EVAL ~%spider%~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x = 1521
+		fj_loc_y = 832
+		fj_spawn_num = 1
+		fj_difficulty = 200
+		fj_delay = 6
+		fj_method = BIT0
+		fj_duration = 1000
+		fj_wander_dist_spawn = 1000
+		fj_mvmt_dist_spawn = 1000
+		fj_max_num = 2
+		STR_VAR
+		fj_structure_type = Spawn
+		fj_name           = g_Spawn_Point_2
+		fj_cre_resref0    = EVAL ~%spider%~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x = 2868
+		fj_loc_y = 850
+		fj_spawn_num = 1
+		fj_difficulty = 200
+		fj_delay = 6
+		fj_method = BIT0
+		fj_duration = 1000
+		fj_wander_dist_spawn = 1000
+		fj_mvmt_dist_spawn = 1000
+		fj_max_num = 2
+		STR_VAR
+		fj_structure_type = Spawn
+		fj_name           = g_Spawn_Point_3
+		fj_cre_resref0    = EVAL ~%spider%~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x = 271
+		fj_loc_y = 493
+		fj_spawn_num = 1
+		fj_difficulty = 200
+		fj_delay = 6
+		fj_method = BIT0
+		fj_duration = 1000
+		fj_wander_dist_spawn = 1000
+		fj_mvmt_dist_spawn = 1000
+		fj_max_num = 2
+		STR_VAR
+		fj_structure_type = Spawn
+		fj_name           = g_Spawn_Point_6
+		fj_cre_resref0    = EVAL ~%spider%~
+	END
 
 
 COPY_EXISTING ~%CoastWay%.are~ ~override~
