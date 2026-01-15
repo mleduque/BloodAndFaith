@@ -1,7 +1,7 @@
 @1    = ~Game is bgee~
 @2    = ~Game is EET~
 @3    = ~Game is BGT~
-@4    = ~Blood and Faith Installation~
+@4    = ~Blood and Faith~
 @5    = ~Arteger~
 @6    = ~Ghost~
 @7    = ~Gravekeeper~
@@ -84,3 +84,4 @@ Equipped abilities:
 - Infravision
 - Move silently +10 (active at night)
 - Hide in Shadows +10 (active at night)~
+@42   = ~This mod need BGEE, BGT or EET~
