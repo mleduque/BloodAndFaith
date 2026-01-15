@@ -270,12 +270,6 @@ COPY ~BloodAndFaith/creatures/g_mordyj.cre~ ~override/g_mordyj.cre~ //
 	SAY DAMAGE ~~ [g_bmou]
 	SAY DYING ~~ [g_bmde]
 
-
-
-
-
-
-
 COPY ~BloodAndFaith/creatures/g_necro.cre~ ~override/g_necro.cre~ //
 	SAY NAME1 @17 /* Necromancer */
 	SAY NAME2 @17 /* Necromancer */
@@ -357,7 +351,7 @@ COPY ~BloodAndFaith/items/gBFed.itm~ ~override/gBFed.itm~
 COPY ~BloodAndFaith/items/g_bfiMs.itm~ ~override/g_bfiMs.itm~
     SAY NAME1 @31 /* ~Mordiyin's Sword~ */
     SAY NAME2 @31 /* ~Mordiyin's Sword~ */
-SAY UNIDENTIFIED_DESC @32 /* ~Something seems off about this sword.~ */
+	SAY UNIDENTIFIED_DESC @32 /* ~Something seems off about this sword.~ */
     SAY DESC @33 /* ~Taken from Mordiyin, a Zhent agent who specialized in hunting down defectors, this is a thoroughly evil weapon. Over the years, it has tasted the blood of many, and it thirsts for battle, for it is unnervingly proficient when wielded against humanoid foes. It glows with a chill light, and anyone not of evil intent finds that its touch burns too much to wield it.
 
 STATISTICS:
@@ -438,15 +432,6 @@ COPY ~BloodAndFaith/Areas/g_warren.are~ ~override~
 		region_name              = Door2001 
 		destination_area = EVAL ~%CoastWay%~
 	END
-// Delete spawn points
-		FOR ( i = SHORT_AT 0x60 ; i ; --i ) BEGIN
-	LPF fj_are_structure
-		INT_VAR
-		fj_delete_mode = i - 1
-		STR_VAR
-		fj_structure_type = Spawn
-	END
-		END
 // Redo spawn points
 	LPF fj_are_structure
 		INT_VAR

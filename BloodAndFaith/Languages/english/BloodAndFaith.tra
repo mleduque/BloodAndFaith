@@ -70,10 +70,18 @@ Weight: 1~
 STATISTICS:
 
 Equipped abilities:
-- THAC0 +1
 - Double wizard spells
 - -3 Charisma
 - -2 Constitution
+
+THAC0: +1
+Damage: 1d6 +1 (Crushing)
+Speed Factor: 3
+Proficiency Type: Staff
+Type: Two-Handed
+
+Requires: 
+- 5 Strength
 - Can't be used by Good
 
 Weight: 4~
