@@ -6,12 +6,12 @@ VERSION ~1.3~
 ALWAYS
 
 	ACTION_IF GAME_IS ~bgee~ BEGIN
-	
+
 		INCLUDE ~BloodAndFaith/lib/g3_bgee_cpmvars.tpa~
 		PRINT @1 /* Game is bgee */
 
 	END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
-	
+
 		INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
 		PRINT @2 /* Game is EET */
 
@@ -63,12 +63,12 @@ AUTO_TRA ~weidu_external/BloodAndFaith/Languages/autotra/%s/Dlg~
 
 
 LANGUAGE ~English~
-         ~english~   
+         ~english~
          ~BloodAndFaith/Languages/english/BloodAndFaith.tra~ //you'd put the mod title in here.
          ~BloodAndFaith/Languages/english/JournalEntries.tra~
 
 LANGUAGE ~Simplified Chinese(by Lzw104522773)~
-         ~schinese~   
+         ~schinese~
          ~BloodAndFaith/Languages/english/BloodAndFaith.tra~
          ~BloodAndFaith/Languages/schinese/BloodAndFaith.tra~ //you'd put the mod title in here.
          ~BloodAndFaith/Languages/english/JournalEntries.tra~
@@ -116,7 +116,7 @@ EXTEND_TOP ~%EBaldursGate_SilencesShop_BCS%.bcs~ ~BloodAndFaith/Scripts/AR0809.b
 EXTEND_TOP ~%BanditCamp_BCS%.bcs~ ~BloodAndFaith/Scripts/AR1900.baf~ //spawns ex-thief
 EXTEND_TOP ~%CloakwoodNest_BCS%.bcs~ ~BloodAndFaith/Scripts/AR2100.baf~ //spawns cloakwood
 EXTEND_TOP ~%CoastWay_BCS%.bcs~ ~BloodAndFaith/Scripts/AR2800.baf~ //coastway zhent
-EXTEND_TOP ~g_warren.bcs~ ~BloodAndFaith/Scripts/g_warren.baf~ 
+EXTEND_TOP ~g_warren.bcs~ ~BloodAndFaith/Scripts/g_warren.baf~
 EXTEND_TOP ~%UlcasterRuins_BCS%.bcs~ ~BloodAndFaith/Scripts/AR3901.baf~ //spawns necro
 EXTEND_TOP ~%Beregost_House12_L1_BCS%.bcs~ ~BloodAndFaith/Scripts/AR3311.baf~
 EXTEND_TOP ~%Beregost_House12_L2_BCS%.bcs~ ~BloodAndFaith/Scripts/AR3312.baf~
@@ -175,11 +175,11 @@ COMPILE ~BloodAndFaith/dialogues/d_gBFmal.d~
 
 
 //creatures
-COPY ~BloodAndFaith/creatures/g_bart.cre~ ~override/g_bart.cre~ 
+COPY ~BloodAndFaith/creatures/g_bart.cre~ ~override/g_bart.cre~
 	SAY NAME1 @5 /* Arteger */
 	SAY NAME2 @5 /* Arteger */
 
-COPY ~BloodAndFaith/creatures/g_bfgho.cre~ ~override/g_bfgho.cre~ 
+COPY ~BloodAndFaith/creatures/g_bfgho.cre~ ~override/g_bfgho.cre~
 	SAY NAME1 @6 /* Ghost */
 	SAY NAME2 @6 /* Ghost */
 
@@ -255,7 +255,7 @@ COPY ~BloodAndFaith/creatures/g_mordy.cre~ ~override/g_mordy.cre~ //
 	SAY BATTLE_CRY2 ~~ [g_bma2]
 	SAY BATTLE_CRY3 ~~ [g_bma3]
 	SAY BATTLE_CRY4 ~~ [g_bma4]
-	SAY BATTLE_CRY5 ~~ 
+	SAY BATTLE_CRY5 ~~
 	SAY DAMAGE ~~ [g_bmou]
 	SAY DYING ~~ [g_bmde]
 
@@ -266,7 +266,7 @@ COPY ~BloodAndFaith/creatures/g_mordyj.cre~ ~override/g_mordyj.cre~ //
 	SAY BATTLE_CRY2 ~~ [g_bma2]
 	SAY BATTLE_CRY3 ~~ [g_bma3]
 	SAY BATTLE_CRY4 ~~ [g_bma4]
-	SAY BATTLE_CRY5 ~~ 
+	SAY BATTLE_CRY5 ~~
 	SAY DAMAGE ~~ [g_bmou]
 	SAY DYING ~~ [g_bmde]
 
@@ -303,9 +303,16 @@ COPY ~BloodAndFaith/creatures/g_rat7.cre~ ~override/g_rat7.cre~ //
 	SAY NAME1 @18 /* Rat */
 	SAY NAME2 @18 /* Rat */
 
+ACTION_IF GAME_IS ~bgee eet~ AND NOT FILE_EXISTS_IN_GAME ~mwraa1.bam~ BEGIN
+	COPY ~BloodAndFaith/animations/wererat~ ~override~
+END
+
 COPY ~BloodAndFaith/creatures/g_rk.cre~ ~override/g_rk.cre~ //
 	SAY NAME1 @19 /* The Rat King */
 	SAY NAME2 @19 /* The Rat King */
+	PATCH_IF GAME_IS ~bgee eet~ BEGIN
+		WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~WERERAT~))
+	END
 
 COPY ~BloodAndFaith/creatures/g_rZhent.cre~ ~override/g_rZhent.cre~ //
 	SAY NAME1 @20 /* Renegade */
@@ -319,14 +326,24 @@ COPY ~BloodAndFaith/creatures/g_zhent1.cre~ ~override/g_zhent1.cre~ //
 	SAY NAME1 @22 /* Zhent Agent */
 	SAY NAME2 @22 /* Zhent Agent */
 
+ACTION_IF GAME_IS ~bgee eet~ AND NOT FILE_EXISTS_IN_GAME ~mmala1.bam~ BEGIN
+	COPY ~BloodAndFaith/animations/malarite~ ~override~
+END
+
 COPY ~BloodAndFaith/creatures/gg_malar.cre~ ~override/gg_malar.cre~ //
 	SAY NAME1 @23 /* Malarite */
 	SAY NAME2 @23 /* Malarite */
+	PATCH_IF GAME_IS ~bgee eet~ BEGIN
+		WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~MALARITE~))
+	END
 
 COPY ~BloodAndFaith/creatures/gg_malaF.cre~ ~override/gg_malaF.cre~ //
 	SAY NAME1 @23 /* Malarite */
 	SAY NAME2 @23 /* Malarite */
 	WRITE_ASCII DIALOG ~d_gBFMal~ (8)
+	PATCH_IF GAME_IS ~bgee eet~ BEGIN
+		WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~MALARITE~))
+	END
 
 COPY ~BloodAndFaith/creatures/gg_can.cre~ ~override/gg_can.cre~ //
 	SAY NAME1 @24 /* Lenovela the Cannibal */
@@ -336,7 +353,7 @@ COPY ~BloodAndFaith/creatures/g_eloran.cre~ ~override/g_eloran.cre~ //
 	SAY NAME1 @25 /* Eloran */
 	SAY NAME2 @25 /* Eloran */
 
-COPY ~BloodAndFaith/items/gBFcc.itm~ ~override/gBFcc.itm~ 
+COPY ~BloodAndFaith/items/gBFcc.itm~ ~override/gBFcc.itm~
      SAY NAME1 @26 /* Coin Collection */
      SAY NAME2 @26 /* Coin Collection */
      SAY DESC @27 /* This coin collection doesn’t have much value, except to the most avid of collectors. */
@@ -429,7 +446,7 @@ COPY ~BloodAndFaith/Areas/g_warren.are~ ~override~
 	WRITE_ASCIIE 0x08 ~%WerewolfCaverns%~ (8)
 	LPF ALTER_AREA_REGION
 		STR_VAR
-		region_name              = Door2001 
+		region_name              = Door2001
 		destination_area = EVAL ~%CoastWay%~
 	END
 // Redo spawn points
@@ -507,15 +524,15 @@ COPY_EXISTING ~%CoastWay%.are~ ~override~
   LPF fj_are_structure
     INT_VAR
     fj_type         = 2    //travel
-    fj_box_left     = 2523  
-    fj_box_top      = 3130 
-    fj_box_right    = 2638  
-    fj_box_bottom   = 3211  
+    fj_box_left     = 2523
+    fj_box_top      = 3130
+    fj_box_right    = 2638
+    fj_box_bottom   = 3211
     fj_cursor_idx   = 30   // door symbol
-    fj_vertex_1    = 2638  + (3168 << 16) 
-    fj_vertex_2    	= 2524  + (3140  << 16) 
-    fj_vertex_3     = 2523  + (3201  << 16) 
-    fj_vertex_0   = 2637  + (3211 << 16) 
+    fj_vertex_1    = 2638  + (3168 << 16)
+    fj_vertex_2    	= 2524  + (3140  << 16)
+    fj_vertex_3     = 2523  + (3201  << 16)
+    fj_vertex_0   = 2637  + (3211 << 16)
     STR_VAR
     fj_structure_type   = region
     fj_name             = Tran_G_WAREnter // name of this travel region so you can address it via script etc.
@@ -526,8 +543,8 @@ COPY_EXISTING ~%CoastWay%.are~ ~override~
 //exit point for back travel
   LPF fj_are_structure
     INT_VAR
-    fj_loc_x       = 2570 
-    fj_loc_y       = 3250 
+    fj_loc_x       = 2570
+    fj_loc_y       = 3250
     fj_orientation = 6   // NW
     STR_VAR
     fj_structure_type = entrance
@@ -535,11 +552,3 @@ COPY_EXISTING ~%CoastWay%.are~ ~override~
   END
 
 	ADD_MAP_NOTE #2617 #3161 ~violet~ @30 /* Warrens */
-
-
-
-
-
-
-
-
